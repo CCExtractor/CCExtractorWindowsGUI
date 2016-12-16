@@ -1,0 +1,15 @@
+C:\Users\Carlos\Documents\Visual Studio 2008\Projects\CCExtractorGUI\CCExtractorGUI\bin\Debug\CCExtractorGUI.exe
+C:\Users\Carlos\Documents\Visual Studio 2008\Projects\CCExtractorGUI\CCExtractorGUI\bin\Debug\CCExtractorGUI.pdb
+C:\Users\Carlos\Documents\Visual Studio 2008\Projects\CCExtractorGUI\CCExtractorGUI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Carlos\Documents\Visual Studio 2008\Projects\CCExtractorGUI\CCExtractorGUI\obj\Debug\CCExtractorGUI.Properties.Resources.resources
+C:\Users\Carlos\Documents\Visual Studio 2008\Projects\CCExtractorGUI\CCExtractorGUI\obj\Debug\CCExtractorGUI.csproj.GenerateResource.Cache
+C:\Users\Carlos\Documents\Visual Studio 2008\Projects\CCExtractorGUI\CCExtractorGUI\obj\Debug\CCExtractorGUI.exe
+C:\Users\Carlos\Documents\Visual Studio 2008\Projects\CCExtractorGUI\CCExtractorGUI\obj\Debug\CCExtractorGUI.pdb
+C:\Users\Carlos\Documents\Visual Studio 2008\Projects\CCExtractorGUI\CCExtractorGUI\obj\Debug\CCExtractorGUI.FormMain.resources
+C:\Users\Carlos\Documents\Visual Studio 2008\Projects\CCExtractorGUI\CCExtractorGUI\bin\Debug\CCExtractorGUI.exe.config
+C:\CCExtractorWindowsBinaries\CCExtractorGUI.exe.config
+C:\CCExtractorWindowsBinaries\Deb\CCExtractorGUI.exe.config
+C:\CCExtractorWindowsBinaries\Deb\Debug\CCExtractorGUI.exe.config
+C:\CCExtractorWindowsBinaries\Debug\CCExtractorGUI.exe.config
+C:\CCExtractorWindowsBinaries\Debug\CCExtractorGUI.exe
+C:\CCExtractorWindowsBinaries\Debug\CCExtractorGUI.pdb
