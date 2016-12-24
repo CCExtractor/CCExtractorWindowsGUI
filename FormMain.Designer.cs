@@ -76,6 +76,9 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tabPageInput = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbBinaryVersionWithOCR = new System.Windows.Forms.RadioButton();
+            this.rbBinaryVersionNoOCR = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.tbUTPListenPort = new System.Windows.Forms.TextBox();
             this.rbInputUTP = new System.Windows.Forms.RadioButton();
@@ -305,9 +308,7 @@
             this.textBoxCommandLine = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.folderBrowserDialogHDHomeRun = new System.Windows.Forms.FolderBrowserDialog();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbBinaryVersionNoOCR = new System.Windows.Forms.RadioButton();
-            this.rbBinaryVersionWithOCR = new System.Windows.Forms.RadioButton();
+            this.rbOutputTypeASS = new System.Windows.Forms.RadioButton();
             tabPageDecoders = new System.Windows.Forms.TabPage();
             tabPageDecoders.SuspendLayout();
             this.groupBoxTelext.SuspendLayout();
@@ -318,6 +319,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPageInput.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabPageInputOptions.SuspendLayout();
             this.groupBoxElementaryStream.SuspendLayout();
             this.groupBoxScreenfulLimits.SuspendLayout();
@@ -369,7 +371,6 @@
             this.tabPageDebug.SuspendLayout();
             this.tabPageHDHomeRun.SuspendLayout();
             this.tabPageExecution.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPageDecoders
@@ -949,6 +950,42 @@
             this.tabPageInput.TabIndex = 0;
             this.tabPageInput.Text = "Input files";
             this.tabPageInput.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox1.Controls.Add(this.rbBinaryVersionWithOCR);
+            this.groupBox1.Controls.Add(this.rbBinaryVersionNoOCR);
+            this.groupBox1.Location = new System.Drawing.Point(0, 394);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(743, 63);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "CCExtractor binary version";
+            // 
+            // rbBinaryVersionWithOCR
+            // 
+            this.rbBinaryVersionWithOCR.AutoSize = true;
+            this.rbBinaryVersionWithOCR.Location = new System.Drawing.Point(370, 19);
+            this.rbBinaryVersionWithOCR.Name = "rbBinaryVersionWithOCR";
+            this.rbBinaryVersionWithOCR.Size = new System.Drawing.Size(344, 17);
+            this.rbBinaryVersionWithOCR.TabIndex = 1;
+            this.rbBinaryVersionWithOCR.Text = "With OCR (use if you need to convert bitmaps to text, such as DVB)";
+            this.rbBinaryVersionWithOCR.UseVisualStyleBackColor = true;
+            this.rbBinaryVersionWithOCR.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // rbBinaryVersionNoOCR
+            // 
+            this.rbBinaryVersionNoOCR.AutoSize = true;
+            this.rbBinaryVersionNoOCR.Checked = true;
+            this.rbBinaryVersionNoOCR.Location = new System.Drawing.Point(8, 19);
+            this.rbBinaryVersionNoOCR.Name = "rbBinaryVersionNoOCR";
+            this.rbBinaryVersionNoOCR.Size = new System.Drawing.Size(340, 17);
+            this.rbBinaryVersionNoOCR.TabIndex = 0;
+            this.rbBinaryVersionNoOCR.TabStop = true;
+            this.rbBinaryVersionNoOCR.Text = "Without OCR (no external dependencies, should work everywhere)";
+            this.rbBinaryVersionNoOCR.UseVisualStyleBackColor = true;
+            this.rbBinaryVersionNoOCR.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
             // 
             // radioButton1
             // 
@@ -2169,6 +2206,7 @@
             // groupBoxOutputType
             // 
             this.groupBoxOutputType.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBoxOutputType.Controls.Add(this.rbOutputTypeASS);
             this.groupBoxOutputType.Controls.Add(this.rbOutputTypeG608);
             this.groupBoxOutputType.Controls.Add(this.rbOutputTypeSimpleXML);
             this.groupBoxOutputType.Controls.Add(this.rbOutputTypeReport);
@@ -3791,47 +3829,22 @@
             this.folderBrowserDialogHDHomeRun.SelectedPath = "C:\\Program Files\\Silicondust\\HDHomeRun";
             this.folderBrowserDialogHDHomeRun.ShowNewFolderButton = false;
             // 
-            // groupBox1
+            // rbOutputTypeASS
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox1.Controls.Add(this.rbBinaryVersionWithOCR);
-            this.groupBox1.Controls.Add(this.rbBinaryVersionNoOCR);
-            this.groupBox1.Location = new System.Drawing.Point(0, 394);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(743, 63);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "CCExtractor binary version";
-            // 
-            // rbBinaryVersionNoOCR
-            // 
-            this.rbBinaryVersionNoOCR.AutoSize = true;
-            this.rbBinaryVersionNoOCR.Checked = true;
-            this.rbBinaryVersionNoOCR.Location = new System.Drawing.Point(8, 19);
-            this.rbBinaryVersionNoOCR.Name = "rbBinaryVersionNoOCR";
-            this.rbBinaryVersionNoOCR.Size = new System.Drawing.Size(340, 17);
-            this.rbBinaryVersionNoOCR.TabIndex = 0;
-            this.rbBinaryVersionNoOCR.TabStop = true;
-            this.rbBinaryVersionNoOCR.Text = "Without OCR (no external dependencies, should work everywhere)";
-            this.rbBinaryVersionNoOCR.UseVisualStyleBackColor = true;
-            this.rbBinaryVersionNoOCR.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
-            // 
-            // rbBinaryVersionWithOCR
-            // 
-            this.rbBinaryVersionWithOCR.AutoSize = true;
-            this.rbBinaryVersionWithOCR.Location = new System.Drawing.Point(370, 19);
-            this.rbBinaryVersionWithOCR.Name = "rbBinaryVersionWithOCR";
-            this.rbBinaryVersionWithOCR.Size = new System.Drawing.Size(344, 17);
-            this.rbBinaryVersionWithOCR.TabIndex = 1;
-            this.rbBinaryVersionWithOCR.Text = "With OCR (use if you need to convert bitmaps to text, such as DVB)";
-            this.rbBinaryVersionWithOCR.UseVisualStyleBackColor = true;
-            this.rbBinaryVersionWithOCR.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            this.rbOutputTypeASS.AutoSize = true;
+            this.rbOutputTypeASS.Location = new System.Drawing.Point(324, 148);
+            this.rbOutputTypeASS.Margin = new System.Windows.Forms.Padding(2);
+            this.rbOutputTypeASS.Name = "rbOutputTypeASS";
+            this.rbOutputTypeASS.Size = new System.Drawing.Size(135, 17);
+            this.rbOutputTypeASS.TabIndex = 13;
+            this.rbOutputTypeASS.Text = ".ass (SubStation Alpha)";
+            this.rbOutputTypeASS.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 592);
+            this.ClientSize = new System.Drawing.Size(756, 593);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.textBoxCommandLine);
             this.Controls.Add(this.tabControlMain);
@@ -3858,6 +3871,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPageInput.ResumeLayout(false);
             this.tabPageInput.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabPageInputOptions.ResumeLayout(false);
             this.groupBoxElementaryStream.ResumeLayout(false);
             this.groupBoxElementaryStream.PerformLayout();
@@ -3938,8 +3953,6 @@
             this.tabPageHDHomeRun.PerformLayout();
             this.tabPageExecution.ResumeLayout(false);
             this.tabPageExecution.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4225,6 +4238,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbBinaryVersionWithOCR;
         private System.Windows.Forms.RadioButton rbBinaryVersionNoOCR;
+        private System.Windows.Forms.RadioButton rbOutputTypeASS;
     }
 }
 

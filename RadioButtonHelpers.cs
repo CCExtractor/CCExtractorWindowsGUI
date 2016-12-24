@@ -127,6 +127,8 @@ namespace CCExtractorGUI
                     return rbOutputTypeSimpleXML;
                 case "report":
                     return rbOutputTypeReport;
+                case "ass":
+                    return rbOutputTypeASS;
                 default:
                     return rbOutputTypeSRT;
             }
@@ -160,6 +162,8 @@ namespace CCExtractorGUI
                 return "simplexml";
             if (rbOutputTypeReport.Checked)
                 return "report";
+            if (rbOutputTypeASS.Checked)
+                return "ass";
             return "srt";
         }
         #endregion

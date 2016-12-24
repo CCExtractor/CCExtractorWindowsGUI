@@ -354,6 +354,8 @@ namespace CCExtractorGUI
                 switches = switches + " -out=simplexml";
             if (rbOutputTypeG608.Checked)
                 switches = switches + " -out=g608";
+            if (rbOutputTypeASS.Checked)
+                switches = switches + " -out=ass";
 
             if (rbRollUpLinesLimit3.Checked)
                 switches = switches + " -ru3";
