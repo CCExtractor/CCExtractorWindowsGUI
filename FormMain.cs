@@ -558,7 +558,7 @@ namespace CCExtractorGUI
             if (rbBinaryVersionNoOCR.Checked)
                 return "ccextractorwin.exe";
             else
-                return "ccextractorwinocr.exe";
+                return "ccextractorwinfull.exe";
 
         }
         
