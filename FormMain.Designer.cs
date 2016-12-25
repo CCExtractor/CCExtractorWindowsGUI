@@ -173,6 +173,7 @@
             this.rbOutputNameManual = new System.Windows.Forms.RadioButton();
             this.rbOutputNameAuto = new System.Windows.Forms.RadioButton();
             this.groupBoxOutputType = new System.Windows.Forms.GroupBox();
+            this.rbOutputTypeASS = new System.Windows.Forms.RadioButton();
             this.rbOutputTypeG608 = new System.Windows.Forms.RadioButton();
             this.rbOutputTypeSimpleXML = new System.Windows.Forms.RadioButton();
             this.rbOutputTypeReport = new System.Windows.Forms.RadioButton();
@@ -270,6 +271,36 @@
             this.butHDHomeRunDir = new System.Windows.Forms.Button();
             this.tbHDHomeRunPath = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
+            this.tabPageBurnedin = new System.Windows.Forms.TabPage();
+            this.cbDetectItalics = new System.Windows.Forms.CheckBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.labelConfThresh = new System.Windows.Forms.Label();
+            this.tbConfThresh = new System.Windows.Forms.TrackBar();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.labelWhitenessThresh = new System.Windows.Forms.Label();
+            this.tbWhitenessThresh = new System.Windows.Forms.TrackBar();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.tbMinSubDuration = new System.Windows.Forms.TextBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbOcrModeLetter = new System.Windows.Forms.RadioButton();
+            this.rbOcrModeWord = new System.Windows.Forms.RadioButton();
+            this.rbOcrModeFrame = new System.Windows.Forms.RadioButton();
+            this.cbPerformBurnedin = new System.Windows.Forms.CheckBox();
+            this.groupBoxBurnedinColor = new System.Windows.Forms.GroupBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.tbBurnedinHue = new System.Windows.Forms.TextBox();
+            this.rbBurnedinCustom = new System.Windows.Forms.RadioButton();
+            this.rbBurnedinRed = new System.Windows.Forms.RadioButton();
+            this.rbBurnedinMagenta = new System.Windows.Forms.RadioButton();
+            this.rbBurnedinBlue = new System.Windows.Forms.RadioButton();
+            this.rbBurnedinCyan = new System.Windows.Forms.RadioButton();
+            this.rbBurnedinGreen = new System.Windows.Forms.RadioButton();
+            this.rbBurnedinYellow = new System.Windows.Forms.RadioButton();
+            this.rbBurnedinWhite = new System.Windows.Forms.RadioButton();
             this.tabPageExecution = new System.Windows.Forms.TabPage();
             this.progressBarActivity = new System.Windows.Forms.ProgressBar();
             this.LABReportsXDSProgramID = new System.Windows.Forms.Label();
@@ -308,7 +339,6 @@
             this.textBoxCommandLine = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.folderBrowserDialogHDHomeRun = new System.Windows.Forms.FolderBrowserDialog();
-            this.rbOutputTypeASS = new System.Windows.Forms.RadioButton();
             tabPageDecoders = new System.Windows.Forms.TabPage();
             tabPageDecoders.SuspendLayout();
             this.groupBoxTelext.SuspendLayout();
@@ -370,6 +400,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.updownStartCreditsNotBeforeMM)).BeginInit();
             this.tabPageDebug.SuspendLayout();
             this.tabPageHDHomeRun.SuspendLayout();
+            this.tabPageBurnedin.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbConfThresh)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbWhitenessThresh)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBoxBurnedinColor.SuspendLayout();
             this.tabPageExecution.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -765,6 +803,7 @@
             this.tabControlMain.Controls.Add(this.tabPageCredits);
             this.tabControlMain.Controls.Add(this.tabPageDebug);
             this.tabControlMain.Controls.Add(this.tabPageHDHomeRun);
+            this.tabControlMain.Controls.Add(this.tabPageBurnedin);
             this.tabControlMain.Controls.Add(this.tabPageExecution);
             this.tabControlMain.Location = new System.Drawing.Point(0, 10);
             this.tabControlMain.Margin = new System.Windows.Forms.Padding(2);
@@ -2229,6 +2268,17 @@
             this.groupBoxOutputType.TabStop = false;
             this.groupBoxOutputType.Text = "Output type";
             // 
+            // rbOutputTypeASS
+            // 
+            this.rbOutputTypeASS.AutoSize = true;
+            this.rbOutputTypeASS.Location = new System.Drawing.Point(324, 148);
+            this.rbOutputTypeASS.Margin = new System.Windows.Forms.Padding(2);
+            this.rbOutputTypeASS.Name = "rbOutputTypeASS";
+            this.rbOutputTypeASS.Size = new System.Drawing.Size(135, 17);
+            this.rbOutputTypeASS.TabIndex = 13;
+            this.rbOutputTypeASS.Text = ".ass (SubStation Alpha)";
+            this.rbOutputTypeASS.UseVisualStyleBackColor = true;
+            // 
             // rbOutputTypeG608
             // 
             this.rbOutputTypeG608.AutoSize = true;
@@ -3442,6 +3492,352 @@
             this.label53.TabIndex = 0;
             this.label53.Text = "HDHomeRun tools location (where hdhomerun_config.exe is)";
             // 
+            // tabPageBurnedin
+            // 
+            this.tabPageBurnedin.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPageBurnedin.Controls.Add(this.cbDetectItalics);
+            this.tabPageBurnedin.Controls.Add(this.groupBox5);
+            this.tabPageBurnedin.Controls.Add(this.groupBox4);
+            this.tabPageBurnedin.Controls.Add(this.groupBox3);
+            this.tabPageBurnedin.Controls.Add(this.groupBox2);
+            this.tabPageBurnedin.Controls.Add(this.cbPerformBurnedin);
+            this.tabPageBurnedin.Controls.Add(this.groupBoxBurnedinColor);
+            this.tabPageBurnedin.Location = new System.Drawing.Point(4, 22);
+            this.tabPageBurnedin.Name = "tabPageBurnedin";
+            this.tabPageBurnedin.Size = new System.Drawing.Size(746, 462);
+            this.tabPageBurnedin.TabIndex = 11;
+            this.tabPageBurnedin.Text = "Burned-in Subtitle Extraction";
+            // 
+            // cbDetectItalics
+            // 
+            this.cbDetectItalics.AutoSize = true;
+            this.cbDetectItalics.Location = new System.Drawing.Point(147, 206);
+            this.cbDetectItalics.Name = "cbDetectItalics";
+            this.cbDetectItalics.Size = new System.Drawing.Size(136, 17);
+            this.cbDetectItalics.TabIndex = 17;
+            this.cbDetectItalics.Text = "Perform Italic Detection";
+            this.cbDetectItalics.UseVisualStyleBackColor = true;
+            this.cbDetectItalics.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox5.Controls.Add(this.labelConfThresh);
+            this.groupBox5.Controls.Add(this.tbConfThresh);
+            this.groupBox5.Location = new System.Drawing.Point(383, 121);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Size = new System.Drawing.Size(220, 78);
+            this.groupBox5.TabIndex = 16;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Confidence Threshold";
+            // 
+            // labelConfThresh
+            // 
+            this.labelConfThresh.AutoSize = true;
+            this.labelConfThresh.Location = new System.Drawing.Point(179, 19);
+            this.labelConfThresh.Name = "labelConfThresh";
+            this.labelConfThresh.Size = new System.Drawing.Size(28, 13);
+            this.labelConfThresh.TabIndex = 2;
+            this.labelConfThresh.Text = "60.0";
+            // 
+            // tbConfThresh
+            // 
+            this.tbConfThresh.Location = new System.Drawing.Point(5, 19);
+            this.tbConfThresh.Maximum = 100;
+            this.tbConfThresh.Name = "tbConfThresh";
+            this.tbConfThresh.Size = new System.Drawing.Size(168, 45);
+            this.tbConfThresh.TabIndex = 2;
+            this.tbConfThresh.TickFrequency = 10;
+            this.tbConfThresh.Value = 60;
+            this.tbConfThresh.Scroll += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox4.Controls.Add(this.labelWhitenessThresh);
+            this.groupBox4.Controls.Add(this.tbWhitenessThresh);
+            this.groupBox4.Location = new System.Drawing.Point(147, 121);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Size = new System.Drawing.Size(220, 78);
+            this.groupBox4.TabIndex = 15;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Luminance Threshold (for white subs)";
+            // 
+            // labelWhitenessThresh
+            // 
+            this.labelWhitenessThresh.AutoSize = true;
+            this.labelWhitenessThresh.Location = new System.Drawing.Point(174, 19);
+            this.labelWhitenessThresh.Name = "labelWhitenessThresh";
+            this.labelWhitenessThresh.Size = new System.Drawing.Size(28, 13);
+            this.labelWhitenessThresh.TabIndex = 1;
+            this.labelWhitenessThresh.Text = "95.0";
+            // 
+            // tbWhitenessThresh
+            // 
+            this.tbWhitenessThresh.Location = new System.Drawing.Point(6, 19);
+            this.tbWhitenessThresh.Maximum = 100;
+            this.tbWhitenessThresh.Name = "tbWhitenessThresh";
+            this.tbWhitenessThresh.Size = new System.Drawing.Size(168, 45);
+            this.tbWhitenessThresh.TabIndex = 0;
+            this.tbWhitenessThresh.TickFrequency = 10;
+            this.tbWhitenessThresh.Value = 95;
+            this.tbWhitenessThresh.Scroll += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox3.Controls.Add(this.label59);
+            this.groupBox3.Controls.Add(this.label58);
+            this.groupBox3.Controls.Add(this.label57);
+            this.groupBox3.Controls.Add(this.tbMinSubDuration);
+            this.groupBox3.Controls.Add(this.label56);
+            this.groupBox3.Location = new System.Drawing.Point(313, 26);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(290, 91);
+            this.groupBox3.TabIndex = 14;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Minimum subtitle duration";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(6, 64);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(149, 13);
+            this.label59.TabIndex = 16;
+            this.label59.Text = "0.5 is the recommended value";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(6, 40);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(246, 13);
+            this.label58.TabIndex = 15;
+            this.label58.Text = "Lower values give better results but take more time";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(220, 20);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(47, 13);
+            this.label57.TabIndex = 14;
+            this.label57.Text = "seconds";
+            // 
+            // tbMinSubDuration
+            // 
+            this.tbMinSubDuration.Location = new System.Drawing.Point(176, 17);
+            this.tbMinSubDuration.Name = "tbMinSubDuration";
+            this.tbMinSubDuration.Size = new System.Drawing.Size(38, 20);
+            this.tbMinSubDuration.TabIndex = 13;
+            this.tbMinSubDuration.Text = "0.5";
+            this.tbMinSubDuration.TextChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(6, 19);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(164, 13);
+            this.label56.TabIndex = 0;
+            this.label56.Text = "Set the minimum subtitle duration:";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBox2.Controls.Add(this.rbOcrModeLetter);
+            this.groupBox2.Controls.Add(this.rbOcrModeWord);
+            this.groupBox2.Controls.Add(this.rbOcrModeFrame);
+            this.groupBox2.Location = new System.Drawing.Point(147, 26);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(149, 91);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "OCR Mode";
+            // 
+            // rbOcrModeLetter
+            // 
+            this.rbOcrModeLetter.AutoSize = true;
+            this.rbOcrModeLetter.Location = new System.Drawing.Point(5, 64);
+            this.rbOcrModeLetter.Name = "rbOcrModeLetter";
+            this.rbOcrModeLetter.Size = new System.Drawing.Size(82, 17);
+            this.rbOcrModeLetter.TabIndex = 5;
+            this.rbOcrModeLetter.Text = "Letter - wise";
+            this.rbOcrModeLetter.UseVisualStyleBackColor = true;
+            this.rbOcrModeLetter.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // rbOcrModeWord
+            // 
+            this.rbOcrModeWord.AutoSize = true;
+            this.rbOcrModeWord.Location = new System.Drawing.Point(5, 41);
+            this.rbOcrModeWord.Name = "rbOcrModeWord";
+            this.rbOcrModeWord.Size = new System.Drawing.Size(81, 17);
+            this.rbOcrModeWord.TabIndex = 4;
+            this.rbOcrModeWord.Text = "Word - wise";
+            this.rbOcrModeWord.UseVisualStyleBackColor = true;
+            this.rbOcrModeWord.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // rbOcrModeFrame
+            // 
+            this.rbOcrModeFrame.AutoSize = true;
+            this.rbOcrModeFrame.Checked = true;
+            this.rbOcrModeFrame.Location = new System.Drawing.Point(5, 18);
+            this.rbOcrModeFrame.Name = "rbOcrModeFrame";
+            this.rbOcrModeFrame.Size = new System.Drawing.Size(84, 17);
+            this.rbOcrModeFrame.TabIndex = 3;
+            this.rbOcrModeFrame.TabStop = true;
+            this.rbOcrModeFrame.Text = "Frame - wise";
+            this.rbOcrModeFrame.UseVisualStyleBackColor = true;
+            this.rbOcrModeFrame.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // cbPerformBurnedin
+            // 
+            this.cbPerformBurnedin.AutoSize = true;
+            this.cbPerformBurnedin.Location = new System.Drawing.Point(4, 4);
+            this.cbPerformBurnedin.Name = "cbPerformBurnedin";
+            this.cbPerformBurnedin.Size = new System.Drawing.Size(194, 17);
+            this.cbPerformBurnedin.TabIndex = 2;
+            this.cbPerformBurnedin.Text = "Perform burned-in subtitle extraction";
+            this.cbPerformBurnedin.UseVisualStyleBackColor = true;
+            this.cbPerformBurnedin.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // groupBoxBurnedinColor
+            // 
+            this.groupBoxBurnedinColor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBoxBurnedinColor.Controls.Add(this.label55);
+            this.groupBoxBurnedinColor.Controls.Add(this.tbBurnedinHue);
+            this.groupBoxBurnedinColor.Controls.Add(this.rbBurnedinCustom);
+            this.groupBoxBurnedinColor.Controls.Add(this.rbBurnedinRed);
+            this.groupBoxBurnedinColor.Controls.Add(this.rbBurnedinMagenta);
+            this.groupBoxBurnedinColor.Controls.Add(this.rbBurnedinBlue);
+            this.groupBoxBurnedinColor.Controls.Add(this.rbBurnedinCyan);
+            this.groupBoxBurnedinColor.Controls.Add(this.rbBurnedinGreen);
+            this.groupBoxBurnedinColor.Controls.Add(this.rbBurnedinYellow);
+            this.groupBoxBurnedinColor.Controls.Add(this.rbBurnedinWhite);
+            this.groupBoxBurnedinColor.Location = new System.Drawing.Point(4, 26);
+            this.groupBoxBurnedinColor.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxBurnedinColor.Name = "groupBoxBurnedinColor";
+            this.groupBoxBurnedinColor.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxBurnedinColor.Size = new System.Drawing.Size(130, 263);
+            this.groupBoxBurnedinColor.TabIndex = 1;
+            this.groupBoxBurnedinColor.TabStop = false;
+            this.groupBoxBurnedinColor.Text = "Subtitle Color";
+            // 
+            // label55
+            // 
+            this.label55.Location = new System.Drawing.Point(5, 202);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(120, 58);
+            this.label55.TabIndex = 12;
+            this.label55.Text = "Custom hue can be between 1 and 360\r\nRefer to HSV color chart";
+            // 
+            // tbBurnedinHue
+            // 
+            this.tbBurnedinHue.Location = new System.Drawing.Point(72, 179);
+            this.tbBurnedinHue.Name = "tbBurnedinHue";
+            this.tbBurnedinHue.Size = new System.Drawing.Size(53, 20);
+            this.tbBurnedinHue.TabIndex = 11;
+            this.tbBurnedinHue.Text = "60";
+            // 
+            // rbBurnedinCustom
+            // 
+            this.rbBurnedinCustom.AutoSize = true;
+            this.rbBurnedinCustom.Location = new System.Drawing.Point(5, 179);
+            this.rbBurnedinCustom.Name = "rbBurnedinCustom";
+            this.rbBurnedinCustom.Size = new System.Drawing.Size(60, 17);
+            this.rbBurnedinCustom.TabIndex = 10;
+            this.rbBurnedinCustom.Text = "Custom";
+            this.rbBurnedinCustom.UseVisualStyleBackColor = true;
+            this.rbBurnedinCustom.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // rbBurnedinRed
+            // 
+            this.rbBurnedinRed.AutoSize = true;
+            this.rbBurnedinRed.Location = new System.Drawing.Point(5, 156);
+            this.rbBurnedinRed.Name = "rbBurnedinRed";
+            this.rbBurnedinRed.Size = new System.Drawing.Size(45, 17);
+            this.rbBurnedinRed.TabIndex = 9;
+            this.rbBurnedinRed.Text = "Red";
+            this.rbBurnedinRed.UseVisualStyleBackColor = true;
+            this.rbBurnedinRed.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // rbBurnedinMagenta
+            // 
+            this.rbBurnedinMagenta.AutoSize = true;
+            this.rbBurnedinMagenta.Location = new System.Drawing.Point(5, 133);
+            this.rbBurnedinMagenta.Name = "rbBurnedinMagenta";
+            this.rbBurnedinMagenta.Size = new System.Drawing.Size(67, 17);
+            this.rbBurnedinMagenta.TabIndex = 8;
+            this.rbBurnedinMagenta.Text = "Magenta";
+            this.rbBurnedinMagenta.UseVisualStyleBackColor = true;
+            this.rbBurnedinMagenta.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // rbBurnedinBlue
+            // 
+            this.rbBurnedinBlue.AutoSize = true;
+            this.rbBurnedinBlue.Location = new System.Drawing.Point(5, 110);
+            this.rbBurnedinBlue.Name = "rbBurnedinBlue";
+            this.rbBurnedinBlue.Size = new System.Drawing.Size(46, 17);
+            this.rbBurnedinBlue.TabIndex = 7;
+            this.rbBurnedinBlue.Text = "Blue";
+            this.rbBurnedinBlue.UseVisualStyleBackColor = true;
+            this.rbBurnedinBlue.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // rbBurnedinCyan
+            // 
+            this.rbBurnedinCyan.AutoSize = true;
+            this.rbBurnedinCyan.Location = new System.Drawing.Point(5, 87);
+            this.rbBurnedinCyan.Name = "rbBurnedinCyan";
+            this.rbBurnedinCyan.Size = new System.Drawing.Size(49, 17);
+            this.rbBurnedinCyan.TabIndex = 6;
+            this.rbBurnedinCyan.Text = "Cyan";
+            this.rbBurnedinCyan.UseVisualStyleBackColor = true;
+            this.rbBurnedinCyan.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // rbBurnedinGreen
+            // 
+            this.rbBurnedinGreen.AutoSize = true;
+            this.rbBurnedinGreen.Location = new System.Drawing.Point(5, 64);
+            this.rbBurnedinGreen.Name = "rbBurnedinGreen";
+            this.rbBurnedinGreen.Size = new System.Drawing.Size(54, 17);
+            this.rbBurnedinGreen.TabIndex = 5;
+            this.rbBurnedinGreen.Text = "Green";
+            this.rbBurnedinGreen.UseVisualStyleBackColor = true;
+            this.rbBurnedinGreen.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // rbBurnedinYellow
+            // 
+            this.rbBurnedinYellow.AutoSize = true;
+            this.rbBurnedinYellow.Location = new System.Drawing.Point(5, 41);
+            this.rbBurnedinYellow.Name = "rbBurnedinYellow";
+            this.rbBurnedinYellow.Size = new System.Drawing.Size(56, 17);
+            this.rbBurnedinYellow.TabIndex = 4;
+            this.rbBurnedinYellow.Text = "Yellow";
+            this.rbBurnedinYellow.UseVisualStyleBackColor = true;
+            this.rbBurnedinYellow.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // rbBurnedinWhite
+            // 
+            this.rbBurnedinWhite.AutoSize = true;
+            this.rbBurnedinWhite.Checked = true;
+            this.rbBurnedinWhite.Location = new System.Drawing.Point(5, 18);
+            this.rbBurnedinWhite.Name = "rbBurnedinWhite";
+            this.rbBurnedinWhite.Size = new System.Drawing.Size(53, 17);
+            this.rbBurnedinWhite.TabIndex = 3;
+            this.rbBurnedinWhite.TabStop = true;
+            this.rbBurnedinWhite.Text = "White";
+            this.rbBurnedinWhite.UseVisualStyleBackColor = true;
+            this.rbBurnedinWhite.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
             // tabPageExecution
             // 
             this.tabPageExecution.Controls.Add(this.progressBarActivity);
@@ -3829,17 +4225,6 @@
             this.folderBrowserDialogHDHomeRun.SelectedPath = "C:\\Program Files\\Silicondust\\HDHomeRun";
             this.folderBrowserDialogHDHomeRun.ShowNewFolderButton = false;
             // 
-            // rbOutputTypeASS
-            // 
-            this.rbOutputTypeASS.AutoSize = true;
-            this.rbOutputTypeASS.Location = new System.Drawing.Point(324, 148);
-            this.rbOutputTypeASS.Margin = new System.Windows.Forms.Padding(2);
-            this.rbOutputTypeASS.Name = "rbOutputTypeASS";
-            this.rbOutputTypeASS.Size = new System.Drawing.Size(135, 17);
-            this.rbOutputTypeASS.TabIndex = 13;
-            this.rbOutputTypeASS.Text = ".ass (SubStation Alpha)";
-            this.rbOutputTypeASS.UseVisualStyleBackColor = true;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3951,6 +4336,20 @@
             this.tabPageDebug.PerformLayout();
             this.tabPageHDHomeRun.ResumeLayout(false);
             this.tabPageHDHomeRun.PerformLayout();
+            this.tabPageBurnedin.ResumeLayout(false);
+            this.tabPageBurnedin.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbConfThresh)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbWhitenessThresh)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBoxBurnedinColor.ResumeLayout(false);
+            this.groupBoxBurnedinColor.PerformLayout();
             this.tabPageExecution.ResumeLayout(false);
             this.tabPageExecution.PerformLayout();
             this.ResumeLayout(false);
@@ -4239,6 +4638,36 @@
         private System.Windows.Forms.RadioButton rbBinaryVersionWithOCR;
         private System.Windows.Forms.RadioButton rbBinaryVersionNoOCR;
         private System.Windows.Forms.RadioButton rbOutputTypeASS;
+        private System.Windows.Forms.TabPage tabPageBurnedin;
+        private System.Windows.Forms.GroupBox groupBoxBurnedinColor;
+        private System.Windows.Forms.CheckBox cbPerformBurnedin;
+        private System.Windows.Forms.RadioButton rbBurnedinGreen;
+        private System.Windows.Forms.RadioButton rbBurnedinYellow;
+        private System.Windows.Forms.RadioButton rbBurnedinWhite;
+        private System.Windows.Forms.RadioButton rbBurnedinCyan;
+        private System.Windows.Forms.RadioButton rbBurnedinCustom;
+        private System.Windows.Forms.RadioButton rbBurnedinRed;
+        private System.Windows.Forms.RadioButton rbBurnedinMagenta;
+        private System.Windows.Forms.RadioButton rbBurnedinBlue;
+        private System.Windows.Forms.TextBox tbBurnedinHue;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rbOcrModeLetter;
+        private System.Windows.Forms.RadioButton rbOcrModeWord;
+        private System.Windows.Forms.RadioButton rbOcrModeFrame;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.CheckBox cbDetectItalics;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.TextBox tbMinSubDuration;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label labelWhitenessThresh;
+        private System.Windows.Forms.TrackBar tbWhitenessThresh;
+        private System.Windows.Forms.Label labelConfThresh;
+        private System.Windows.Forms.TrackBar tbConfThresh;
     }
 }
 
