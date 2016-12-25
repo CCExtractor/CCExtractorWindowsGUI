@@ -354,6 +354,8 @@ namespace CCExtractorGUI
                 switches = switches + " -out=simplexml";
             if (rbOutputTypeG608.Checked)
                 switches = switches + " -out=g608";
+            if (rbOutputTypeASS.Checked)
+                switches = switches + " -out=ass";
 
             if (rbRollUpLinesLimit3.Checked)
                 switches = switches + " -ru3";
@@ -538,6 +540,61 @@ namespace CCExtractorGUI
             }
             return switches;
         }
+
+        private string getSwitchesFromBurnedInTab()
+        {
+            string switches = "";
+            if (cbPerformBurnedin.Checked)
+            {
+                switches += " -hardsubx";
+
+                // OCR mode
+                // frame is default
+                if (rbOcrModeLetter.Checked)
+                    switches += " -ocr_mode letter";
+                else if (rbOcrModeWord.Checked)
+                    switches += " -ocr_mode word";
+
+                // subcolor
+                switches += " -subcolor ";
+                if (rbBurnedinWhite.Checked)
+                    switches += "white";
+                else if (rbBurnedinYellow.Checked)
+                    switches += "yellow";
+                else if (rbBurnedinGreen.Checked)
+                    switches += "green";
+                else if (rbBurnedinCyan.Checked)
+                    switches += "cyan";
+                else if (rbBurnedinBlue.Checked)
+                    switches += "blue";
+                else if (rbBurnedinMagenta.Checked)
+                    switches += "magenta";
+                else if (rbBurnedinRed.Checked)
+                    switches += "red";
+                else if (rbBurnedinCustom.Checked)
+                    switches += tbBurnedinHue.Text;
+
+                // Min sub duration
+                // 0.5 is default
+                if (tbMinSubDuration.Text != "0.5")
+                    switches += " -min_sub_duration " + tbMinSubDuration.Text;
+
+                // Detect Italics
+                if (cbDetectItalics.Checked)
+                    switches += " -detect_italics";
+
+                // Confidence Threshold
+                switches += " -conf_thresh " + tbConfThresh.Value;
+                labelConfThresh.Text = tbConfThresh.Value + ".0";
+
+                // Whiteness Threshold
+                // 95 is default
+                if (tbWhitenessThresh.Value != 95)
+                    switches += " -whiteness_thresh " + tbWhitenessThresh.Value;
+                labelWhitenessThresh.Text = tbWhitenessThresh.Value + ".0";
+            }
+            return switches;
+        }
         
         public string getSwitches()
         {
@@ -547,7 +604,8 @@ namespace CCExtractorGUI
                     getSwitchesFromOutputTab()+
                     getSwitchesFromDebugTab()+
                     getSwitchesFromDecoderTab()+
-                    getSwitchesFromCreditsTab()
+                    getSwitchesFromCreditsTab()+
+                    getSwitchesFromBurnedInTab()
                     ;
         }
 
@@ -556,7 +614,7 @@ namespace CCExtractorGUI
             if (rbBinaryVersionNoOCR.Checked)
                 return "ccextractorwin.exe";
             else
-                return "ccextractorwinocr.exe";
+                return "ccextractorwinfull.exe";
 
         }
         
