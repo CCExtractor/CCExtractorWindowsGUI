@@ -76,6 +76,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tabPageInput = new System.Windows.Forms.TabPage();
+            this.checkVideo = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbBinaryVersionWithOCR = new System.Windows.Forms.RadioButton();
             this.rbBinaryVersionNoOCR = new System.Windows.Forms.RadioButton();
@@ -977,6 +978,7 @@
             // 
             // tabPageInput
             // 
+            this.tabPageInput.Controls.Add(this.checkVideo);
             this.tabPageInput.Controls.Add(this.groupBox1);
             this.tabPageInput.Controls.Add(this.radioButton1);
             this.tabPageInput.Controls.Add(this.tbUTPListenPort);
@@ -991,6 +993,17 @@
             this.tabPageInput.TabIndex = 0;
             this.tabPageInput.Text = "Input files";
             this.tabPageInput.UseVisualStyleBackColor = true;
+            // 
+            // checkVideo
+            // 
+            this.checkVideo.AutoSize = true;
+            this.checkVideo.Location = new System.Drawing.Point(281, 46);
+            this.checkVideo.Name = "checkVideo";
+            this.checkVideo.Size = new System.Drawing.Size(281, 17);
+            this.checkVideo.TabIndex = 7;
+            this.checkVideo.Text = "Check for common video files (on basis of extensions).";
+            this.checkVideo.UseVisualStyleBackColor = true;
+            this.checkVideo.CheckedChanged += new System.EventHandler(this.checkVideo_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -4701,6 +4714,7 @@
         private System.Windows.Forms.TrackBar tbWhitenessThresh;
         private System.Windows.Forms.Label labelConfThresh;
         private System.Windows.Forms.TrackBar tbConfThresh;
+        private System.Windows.Forms.CheckBox checkVideo;
     }
 }
 

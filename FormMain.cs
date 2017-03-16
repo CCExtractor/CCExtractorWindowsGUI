@@ -655,12 +655,71 @@ namespace CCExtractorGUI
                 e.Effect = DragDropEffects.None;
         }
 
+        static bool checkVideoFormat = false;
+
+        static string[] mediaExtensions = {
+           ".TS", ".M4V", ".ES", ".M2TS", ".PS", ".ASF", ".WTV", ".RAW", ".BIN", ".MKV", ".HEX", ".AVI", ".MP4", ".DIVX", ".WMV", //TODO add other formats or remove check altogether
+        };
+
+        static bool IsMediaFile(string path)
+        {
+            return -1 != Array.IndexOf(mediaExtensions, Path.GetExtension(path).ToUpperInvariant());
+        }
+
+        private void ProcessDir(string sourceDir)         //recursively go through all directories for files
+        {
+            // Process the list of files found in the directory. 
+            string[] fileEntries = Directory.GetFiles(sourceDir);
+            foreach (string fileName in fileEntries)
+            {
+                // add them to listbox
+
+                if (checkVideoFormat)
+                {
+                    if (IsMediaFile(fileName))
+                    {
+                        listViewInputFiles.Items.Add(fileName);
+                    }
+                }
+
+                else
+                {
+                    listViewInputFiles.Items.Add(fileName);
+                }
+            }
+
+
+            // Recurse into subdirectories of this directory.
+            string[] subdirEntries = Directory.GetDirectories(sourceDir);
+            foreach (string subdir in subdirEntries)
+                // Do not iterate through reparse points
+                if ((File.GetAttributes(subdir) &
+                        FileAttributes.ReparsePoint) !=
+                            FileAttributes.ReparsePoint)
+
+                    ProcessDir(subdir);
+        }
+
         private void listViewInputFiles_DragDrop(object sender, DragEventArgs e)
         {
-            String[] file_names = (String[]) e.Data.GetData(DataFormats.FileDrop);
-            foreach (string file_name in file_names)
+            List<string> file_paths = new List<string>();
+            foreach (var s in (string[])e.Data.GetData(DataFormats.FileDrop, false))
             {
-                listViewInputFiles.Items.Add(file_name);                
+                if (Directory.Exists(s))
+                {
+                    //Add files from folder
+                    ProcessDir(s);
+                }
+                else
+                {
+                    //Add filepath
+                    file_paths.Add(s);
+                }
+            }
+
+            foreach (string filepath in file_paths)
+            {
+                listViewInputFiles.Items.Add(filepath);
             }
             prepareCommandLine();
         }
@@ -1129,5 +1188,14 @@ namespace CCExtractorGUI
         {
             System.Diagnostics.Process.Start("https://github.com/CCExtractor/ccextractor/issues");
         }
+
+        private void checkVideo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkVideo.Checked)
+            {
+                checkVideoFormat = true;
+            }
+        }
+
     }        
 }
