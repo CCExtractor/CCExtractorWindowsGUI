@@ -1191,7 +1191,7 @@ namespace CCExtractorGUI
 
         private void checkVideo_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkVideo.Checked)
+            if (cbcheckVideo.Checked)
             {
                 checkVideoFormat = true;
             }
