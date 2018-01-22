@@ -123,6 +123,7 @@
             this.rbSplitVideoTool = new System.Windows.Forms.RadioButton();
             this.rbSplitIndividual = new System.Windows.Forms.RadioButton();
             this.groupBoxInputType = new System.Windows.Forms.GroupBox();
+            this.rbInputTypeMKV = new System.Windows.Forms.RadioButton();
             this.rbInputTypeM2TS = new System.Windows.Forms.RadioButton();
             this.rbInputTypeWTV = new System.Windows.Forms.RadioButton();
             this.rbInputTypeHexDump = new System.Windows.Forms.RadioButton();
@@ -174,6 +175,8 @@
             this.rbOutputNameManual = new System.Windows.Forms.RadioButton();
             this.rbOutputNameAuto = new System.Windows.Forms.RadioButton();
             this.groupBoxOutputType = new System.Windows.Forms.GroupBox();
+            this.rbOutputTypeWebVTTFull = new System.Windows.Forms.RadioButton();
+            this.rbOutputTypeWebVTT = new System.Windows.Forms.RadioButton();
             this.rbOutputTypeASS = new System.Windows.Forms.RadioButton();
             this.rbOutputTypeG608 = new System.Windows.Forms.RadioButton();
             this.rbOutputTypeSimpleXML = new System.Windows.Forms.RadioButton();
@@ -340,6 +343,7 @@
             this.textBoxCommandLine = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.folderBrowserDialogHDHomeRun = new System.Windows.Forms.FolderBrowserDialog();
+            this.rbInputTypeMXF = new System.Windows.Forms.RadioButton();
             tabPageDecoders = new System.Windows.Forms.TabPage();
             tabPageDecoders.SuspendLayout();
             this.groupBoxTelext.SuspendLayout();
@@ -433,7 +437,7 @@
             tabPageDecoders.Controls.Add(this.groupBoxField);
             tabPageDecoders.Controls.Add(this.label39);
             tabPageDecoders.Location = new System.Drawing.Point(4, 22);
-            tabPageDecoders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            tabPageDecoders.Margin = new System.Windows.Forms.Padding(2);
             tabPageDecoders.Name = "tabPageDecoders";
             tabPageDecoders.Size = new System.Drawing.Size(746, 462);
             tabPageDecoders.TabIndex = 9;
@@ -443,7 +447,7 @@
             // txtlevdistmaxpct
             // 
             this.txtlevdistmaxpct.Location = new System.Drawing.Point(560, 422);
-            this.txtlevdistmaxpct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtlevdistmaxpct.Margin = new System.Windows.Forms.Padding(2);
             this.txtlevdistmaxpct.Name = "txtlevdistmaxpct";
             this.txtlevdistmaxpct.Size = new System.Drawing.Size(76, 20);
             this.txtlevdistmaxpct.TabIndex = 24;
@@ -462,7 +466,7 @@
             // txtlevdistmincnt
             // 
             this.txtlevdistmincnt.Location = new System.Drawing.Point(187, 424);
-            this.txtlevdistmincnt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtlevdistmincnt.Margin = new System.Windows.Forms.Padding(2);
             this.txtlevdistmincnt.Name = "txtlevdistmincnt";
             this.txtlevdistmincnt.Size = new System.Drawing.Size(76, 20);
             this.txtlevdistmincnt.TabIndex = 22;
@@ -512,9 +516,9 @@
             this.groupBoxTelext.Controls.Add(this.label47);
             this.groupBoxTelext.Controls.Add(this.rbTeletextAuto);
             this.groupBoxTelext.Location = new System.Drawing.Point(2, 272);
-            this.groupBoxTelext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxTelext.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxTelext.Name = "groupBoxTelext";
-            this.groupBoxTelext.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxTelext.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxTelext.Size = new System.Drawing.Size(746, 99);
             this.groupBoxTelext.TabIndex = 18;
             this.groupBoxTelext.TabStop = false;
@@ -523,7 +527,7 @@
             // 
             this.rbPreferDVB.AutoSize = true;
             this.rbPreferDVB.Location = new System.Drawing.Point(6, 65);
-            this.rbPreferDVB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbPreferDVB.Margin = new System.Windows.Forms.Padding(2);
             this.rbPreferDVB.Name = "rbPreferDVB";
             this.rbPreferDVB.Size = new System.Drawing.Size(268, 17);
             this.rbPreferDVB.TabIndex = 20;
@@ -535,7 +539,7 @@
             // txtTeletextPage
             // 
             this.txtTeletextPage.Location = new System.Drawing.Point(528, 66);
-            this.txtTeletextPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTeletextPage.Margin = new System.Windows.Forms.Padding(2);
             this.txtTeletextPage.Name = "txtTeletextPage";
             this.txtTeletextPage.Size = new System.Drawing.Size(76, 20);
             this.txtTeletextPage.TabIndex = 19;
@@ -556,7 +560,7 @@
             // 
             this.rbTeletextForce.AutoSize = true;
             this.rbTeletextForce.Location = new System.Drawing.Point(286, 17);
-            this.rbTeletextForce.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbTeletextForce.Margin = new System.Windows.Forms.Padding(2);
             this.rbTeletextForce.Name = "rbTeletextForce";
             this.rbTeletextForce.Size = new System.Drawing.Size(232, 17);
             this.rbTeletextForce.TabIndex = 2;
@@ -567,7 +571,7 @@
             // txtTeletextPID
             // 
             this.txtTeletextPID.Location = new System.Drawing.Point(528, 34);
-            this.txtTeletextPID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTeletextPID.Margin = new System.Windows.Forms.Padding(2);
             this.txtTeletextPID.Name = "txtTeletextPID";
             this.txtTeletextPID.Size = new System.Drawing.Size(76, 20);
             this.txtTeletextPID.TabIndex = 17;
@@ -578,7 +582,7 @@
             // 
             this.rbTeletextDisable.AutoSize = true;
             this.rbTeletextDisable.Location = new System.Drawing.Point(133, 17);
-            this.rbTeletextDisable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbTeletextDisable.Margin = new System.Windows.Forms.Padding(2);
             this.rbTeletextDisable.Name = "rbTeletextDisable";
             this.rbTeletextDisable.Size = new System.Drawing.Size(151, 17);
             this.rbTeletextDisable.TabIndex = 1;
@@ -601,7 +605,7 @@
             this.rbTeletextAuto.AutoSize = true;
             this.rbTeletextAuto.Checked = true;
             this.rbTeletextAuto.Location = new System.Drawing.Point(6, 17);
-            this.rbTeletextAuto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbTeletextAuto.Margin = new System.Windows.Forms.Padding(2);
             this.rbTeletextAuto.Name = "rbTeletextAuto";
             this.rbTeletextAuto.Size = new System.Drawing.Size(114, 17);
             this.rbTeletextAuto.TabIndex = 0;
@@ -636,7 +640,7 @@
             // txt708Services
             // 
             this.txt708Services.Location = new System.Drawing.Point(277, 173);
-            this.txt708Services.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt708Services.Margin = new System.Windows.Forms.Padding(2);
             this.txt708Services.Name = "txt708Services";
             this.txt708Services.Size = new System.Drawing.Size(122, 20);
             this.txt708Services.TabIndex = 12;
@@ -658,7 +662,7 @@
             // 
             this.cbEnable708Decoder.AutoSize = true;
             this.cbEnable708Decoder.Location = new System.Drawing.Point(6, 172);
-            this.cbEnable708Decoder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbEnable708Decoder.Margin = new System.Windows.Forms.Padding(2);
             this.cbEnable708Decoder.Name = "cbEnable708Decoder";
             this.cbEnable708Decoder.Size = new System.Drawing.Size(122, 17);
             this.cbEnable708Decoder.TabIndex = 10;
@@ -704,9 +708,9 @@
             this.groupBoxChannel.Controls.Add(this.rbChannel2);
             this.groupBoxChannel.Controls.Add(this.rbChannel1);
             this.groupBoxChannel.Location = new System.Drawing.Point(165, 18);
-            this.groupBoxChannel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxChannel.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxChannel.Name = "groupBoxChannel";
-            this.groupBoxChannel.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxChannel.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxChannel.Size = new System.Drawing.Size(184, 73);
             this.groupBoxChannel.TabIndex = 6;
             this.groupBoxChannel.TabStop = false;
@@ -716,7 +720,7 @@
             // 
             this.rbChannel2.AutoSize = true;
             this.rbChannel2.Location = new System.Drawing.Point(4, 37);
-            this.rbChannel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbChannel2.Margin = new System.Windows.Forms.Padding(2);
             this.rbChannel2.Name = "rbChannel2";
             this.rbChannel2.Size = new System.Drawing.Size(174, 17);
             this.rbChannel2.TabIndex = 1;
@@ -729,7 +733,7 @@
             this.rbChannel1.AutoSize = true;
             this.rbChannel1.Checked = true;
             this.rbChannel1.Location = new System.Drawing.Point(4, 17);
-            this.rbChannel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbChannel1.Margin = new System.Windows.Forms.Padding(2);
             this.rbChannel1.Name = "rbChannel1";
             this.rbChannel1.Size = new System.Drawing.Size(174, 17);
             this.rbChannel1.TabIndex = 0;
@@ -744,9 +748,9 @@
             this.groupBoxField.Controls.Add(this.cbField2);
             this.groupBoxField.Controls.Add(this.cbField1);
             this.groupBoxField.Location = new System.Drawing.Point(0, 18);
-            this.groupBoxField.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxField.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxField.Name = "groupBoxField";
-            this.groupBoxField.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxField.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxField.Size = new System.Drawing.Size(164, 73);
             this.groupBoxField.TabIndex = 5;
             this.groupBoxField.TabStop = false;
@@ -756,7 +760,7 @@
             // 
             this.cbField2.AutoSize = true;
             this.cbField2.Location = new System.Drawing.Point(4, 39);
-            this.cbField2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbField2.Margin = new System.Windows.Forms.Padding(2);
             this.cbField2.Name = "cbField2";
             this.cbField2.Size = new System.Drawing.Size(156, 17);
             this.cbField2.TabIndex = 1;
@@ -770,7 +774,7 @@
             this.cbField1.Checked = true;
             this.cbField1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbField1.Location = new System.Drawing.Point(4, 17);
-            this.cbField1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbField1.Margin = new System.Windows.Forms.Padding(2);
             this.cbField1.Name = "cbField1";
             this.cbField1.Size = new System.Drawing.Size(156, 17);
             this.cbField1.TabIndex = 0;
@@ -807,7 +811,7 @@
             this.tabControlMain.Controls.Add(this.tabPageBurnedin);
             this.tabControlMain.Controls.Add(this.tabPageExecution);
             this.tabControlMain.Location = new System.Drawing.Point(0, 10);
-            this.tabControlMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControlMain.Margin = new System.Windows.Forms.Padding(2);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.Size = new System.Drawing.Size(754, 488);
@@ -829,9 +833,9 @@
             this.tabPageAbout.Controls.Add(this.label19);
             this.tabPageAbout.Controls.Add(this.label18);
             this.tabPageAbout.Location = new System.Drawing.Point(4, 22);
-            this.tabPageAbout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageAbout.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageAbout.Name = "tabPageAbout";
-            this.tabPageAbout.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageAbout.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageAbout.Size = new System.Drawing.Size(746, 462);
             this.tabPageAbout.TabIndex = 7;
             this.tabPageAbout.Text = "About & Save";
@@ -869,7 +873,7 @@
             // butRestoreDefault
             // 
             this.butRestoreDefault.Location = new System.Drawing.Point(570, 406);
-            this.butRestoreDefault.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butRestoreDefault.Margin = new System.Windows.Forms.Padding(2);
             this.butRestoreDefault.Name = "butRestoreDefault";
             this.butRestoreDefault.Size = new System.Drawing.Size(146, 21);
             this.butRestoreDefault.TabIndex = 11;
@@ -880,7 +884,7 @@
             // btnSaveAsDefault
             // 
             this.btnSaveAsDefault.Location = new System.Drawing.Point(373, 406);
-            this.btnSaveAsDefault.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSaveAsDefault.Margin = new System.Windows.Forms.Padding(2);
             this.btnSaveAsDefault.Name = "btnSaveAsDefault";
             this.btnSaveAsDefault.Size = new System.Drawing.Size(172, 21);
             this.btnSaveAsDefault.TabIndex = 10;
@@ -893,7 +897,7 @@
             this.pictureBox2.Image = global::CCExtractorGUI.Properties.Resources.carlos_email;
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
             this.pictureBox2.Location = new System.Drawing.Point(88, 255);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(213, 49);
             this.pictureBox2.TabIndex = 9;
@@ -924,7 +928,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(6, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(53, 47);
             this.pictureBox1.TabIndex = 6;
@@ -984,9 +988,9 @@
             this.tabPageInput.Controls.Add(this.butClearInputList);
             this.tabPageInput.Controls.Add(this.listViewInputFiles);
             this.tabPageInput.Location = new System.Drawing.Point(4, 22);
-            this.tabPageInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageInput.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageInput.Name = "tabPageInput";
-            this.tabPageInput.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageInput.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageInput.Size = new System.Drawing.Size(746, 462);
             this.tabPageInput.TabIndex = 0;
             this.tabPageInput.Text = "Input files";
@@ -996,7 +1000,7 @@
             // 
             this.cbcheckVideo.AutoSize = true;
             this.cbcheckVideo.Location = new System.Drawing.Point(4, 365);
-            this.cbcheckVideo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbcheckVideo.Margin = new System.Windows.Forms.Padding(2);
             this.cbcheckVideo.Name = "cbcheckVideo";
             this.cbcheckVideo.Size = new System.Drawing.Size(314, 17);
             this.cbcheckVideo.TabIndex = 7;
@@ -1045,7 +1049,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(6, 46);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(254, 17);
             this.radioButton1.TabIndex = 5;
@@ -1057,7 +1061,7 @@
             // tbUTPListenPort
             // 
             this.tbUTPListenPort.Location = new System.Drawing.Point(205, 14);
-            this.tbUTPListenPort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUTPListenPort.Margin = new System.Windows.Forms.Padding(2);
             this.tbUTPListenPort.Name = "tbUTPListenPort";
             this.tbUTPListenPort.Size = new System.Drawing.Size(76, 20);
             this.tbUTPListenPort.TabIndex = 4;
@@ -1067,7 +1071,7 @@
             // 
             this.rbInputUTP.AutoSize = true;
             this.rbInputUTP.Location = new System.Drawing.Point(6, 14);
-            this.rbInputUTP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbInputUTP.Margin = new System.Windows.Forms.Padding(2);
             this.rbInputUTP.Name = "rbInputUTP";
             this.rbInputUTP.Size = new System.Drawing.Size(197, 17);
             this.rbInputUTP.TabIndex = 3;
@@ -1078,7 +1082,7 @@
             // butClearInputList
             // 
             this.butClearInputList.Location = new System.Drawing.Point(667, 42);
-            this.butClearInputList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butClearInputList.Margin = new System.Windows.Forms.Padding(2);
             this.butClearInputList.Name = "butClearInputList";
             this.butClearInputList.Size = new System.Drawing.Size(76, 21);
             this.butClearInputList.TabIndex = 2;
@@ -1094,7 +1098,7 @@
             this.listViewInputFiles.FullRowSelect = true;
             this.listViewInputFiles.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.listViewInputFiles.Location = new System.Drawing.Point(2, 78);
-            this.listViewInputFiles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listViewInputFiles.Margin = new System.Windows.Forms.Padding(2);
             this.listViewInputFiles.MultiSelect = false;
             this.listViewInputFiles.Name = "listViewInputFiles";
             this.listViewInputFiles.ShowGroups = false;
@@ -1115,9 +1119,9 @@
             this.tabPageInputOptions.Controls.Add(this.groupBoxSplitType);
             this.tabPageInputOptions.Controls.Add(this.groupBoxInputType);
             this.tabPageInputOptions.Location = new System.Drawing.Point(4, 22);
-            this.tabPageInputOptions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageInputOptions.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageInputOptions.Name = "tabPageInputOptions";
-            this.tabPageInputOptions.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageInputOptions.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageInputOptions.Size = new System.Drawing.Size(746, 462);
             this.tabPageInputOptions.TabIndex = 2;
             this.tabPageInputOptions.Text = "Input options";
@@ -1134,9 +1138,9 @@
             this.groupBoxElementaryStream.Controls.Add(this.rbElementaryStreamFixedStreamNumber);
             this.groupBoxElementaryStream.Controls.Add(this.rbElementaryStreamAuto);
             this.groupBoxElementaryStream.Location = new System.Drawing.Point(0, 320);
-            this.groupBoxElementaryStream.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxElementaryStream.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxElementaryStream.Name = "groupBoxElementaryStream";
-            this.groupBoxElementaryStream.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxElementaryStream.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxElementaryStream.Size = new System.Drawing.Size(748, 73);
             this.groupBoxElementaryStream.TabIndex = 9;
             this.groupBoxElementaryStream.TabStop = false;
@@ -1155,7 +1159,7 @@
             // tbElementaryStreamType
             // 
             this.tbElementaryStreamType.Location = new System.Drawing.Point(488, 41);
-            this.tbElementaryStreamType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbElementaryStreamType.Margin = new System.Windows.Forms.Padding(2);
             this.tbElementaryStreamType.Name = "tbElementaryStreamType";
             this.tbElementaryStreamType.Size = new System.Drawing.Size(68, 20);
             this.tbElementaryStreamType.TabIndex = 5;
@@ -1164,7 +1168,7 @@
             // tbElementaryDataStreamType
             // 
             this.tbElementaryDataStreamType.Location = new System.Drawing.Point(488, 17);
-            this.tbElementaryDataStreamType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbElementaryDataStreamType.Margin = new System.Windows.Forms.Padding(2);
             this.tbElementaryDataStreamType.Name = "tbElementaryDataStreamType";
             this.tbElementaryDataStreamType.Size = new System.Drawing.Size(76, 20);
             this.tbElementaryDataStreamType.TabIndex = 4;
@@ -1174,7 +1178,7 @@
             // 
             this.rbElementaryStreamSelectType.AutoSize = true;
             this.rbElementaryStreamSelectType.Location = new System.Drawing.Point(286, 17);
-            this.rbElementaryStreamSelectType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbElementaryStreamSelectType.Margin = new System.Windows.Forms.Padding(2);
             this.rbElementaryStreamSelectType.Name = "rbElementaryStreamSelectType";
             this.rbElementaryStreamSelectType.Size = new System.Drawing.Size(198, 17);
             this.rbElementaryStreamSelectType.TabIndex = 3;
@@ -1185,7 +1189,7 @@
             // tbElementaryStreamPID
             // 
             this.tbElementaryStreamPID.Location = new System.Drawing.Point(182, 38);
-            this.tbElementaryStreamPID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbElementaryStreamPID.Margin = new System.Windows.Forms.Padding(2);
             this.tbElementaryStreamPID.Name = "tbElementaryStreamPID";
             this.tbElementaryStreamPID.Size = new System.Drawing.Size(76, 20);
             this.tbElementaryStreamPID.TabIndex = 2;
@@ -1195,7 +1199,7 @@
             // 
             this.rbElementaryStreamFixedStreamNumber.AutoSize = true;
             this.rbElementaryStreamFixedStreamNumber.Location = new System.Drawing.Point(4, 39);
-            this.rbElementaryStreamFixedStreamNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbElementaryStreamFixedStreamNumber.Margin = new System.Windows.Forms.Padding(2);
             this.rbElementaryStreamFixedStreamNumber.Name = "rbElementaryStreamFixedStreamNumber";
             this.rbElementaryStreamFixedStreamNumber.Size = new System.Drawing.Size(177, 17);
             this.rbElementaryStreamFixedStreamNumber.TabIndex = 1;
@@ -1208,7 +1212,7 @@
             this.rbElementaryStreamAuto.AutoSize = true;
             this.rbElementaryStreamAuto.Checked = true;
             this.rbElementaryStreamAuto.Location = new System.Drawing.Point(4, 17);
-            this.rbElementaryStreamAuto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbElementaryStreamAuto.Margin = new System.Windows.Forms.Padding(2);
             this.rbElementaryStreamAuto.Name = "rbElementaryStreamAuto";
             this.rbElementaryStreamAuto.Size = new System.Drawing.Size(232, 17);
             this.rbElementaryStreamAuto.TabIndex = 0;
@@ -1225,9 +1229,9 @@
             this.groupBoxScreenfulLimits.Controls.Add(this.rbScreenfulsStopAfter);
             this.groupBoxScreenfulLimits.Controls.Add(this.rbScreenfulsNoLimit);
             this.groupBoxScreenfulLimits.Location = new System.Drawing.Point(390, 263);
-            this.groupBoxScreenfulLimits.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxScreenfulLimits.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxScreenfulLimits.Name = "groupBoxScreenfulLimits";
-            this.groupBoxScreenfulLimits.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxScreenfulLimits.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxScreenfulLimits.Size = new System.Drawing.Size(358, 57);
             this.groupBoxScreenfulLimits.TabIndex = 8;
             this.groupBoxScreenfulLimits.TabStop = false;
@@ -1236,7 +1240,7 @@
             // updownScreenfuls
             // 
             this.updownScreenfuls.Location = new System.Drawing.Point(70, 37);
-            this.updownScreenfuls.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updownScreenfuls.Margin = new System.Windows.Forms.Padding(2);
             this.updownScreenfuls.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -1261,7 +1265,7 @@
             // 
             this.rbScreenfulsStopAfter.AutoSize = true;
             this.rbScreenfulsStopAfter.Location = new System.Drawing.Point(4, 37);
-            this.rbScreenfulsStopAfter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbScreenfulsStopAfter.Margin = new System.Windows.Forms.Padding(2);
             this.rbScreenfulsStopAfter.Name = "rbScreenfulsStopAfter";
             this.rbScreenfulsStopAfter.Size = new System.Drawing.Size(71, 17);
             this.rbScreenfulsStopAfter.TabIndex = 1;
@@ -1274,7 +1278,7 @@
             this.rbScreenfulsNoLimit.AutoSize = true;
             this.rbScreenfulsNoLimit.Checked = true;
             this.rbScreenfulsNoLimit.Location = new System.Drawing.Point(4, 17);
-            this.rbScreenfulsNoLimit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbScreenfulsNoLimit.Margin = new System.Windows.Forms.Padding(2);
             this.rbScreenfulsNoLimit.Name = "rbScreenfulsNoLimit";
             this.rbScreenfulsNoLimit.Size = new System.Drawing.Size(59, 17);
             this.rbScreenfulsNoLimit.TabIndex = 0;
@@ -1292,9 +1296,9 @@
             this.groupBoxEndOfProcessing.Controls.Add(this.rbProcessingEndToPoint);
             this.groupBoxEndOfProcessing.Controls.Add(this.rbProcessingEndToFinish);
             this.groupBoxEndOfProcessing.Location = new System.Drawing.Point(195, 263);
-            this.groupBoxEndOfProcessing.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxEndOfProcessing.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxEndOfProcessing.Name = "groupBoxEndOfProcessing";
-            this.groupBoxEndOfProcessing.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxEndOfProcessing.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxEndOfProcessing.Size = new System.Drawing.Size(195, 57);
             this.groupBoxEndOfProcessing.TabIndex = 7;
             this.groupBoxEndOfProcessing.TabStop = false;
@@ -1303,7 +1307,7 @@
             // updownEndSeconds
             // 
             this.updownEndSeconds.Location = new System.Drawing.Point(138, 36);
-            this.updownEndSeconds.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updownEndSeconds.Margin = new System.Windows.Forms.Padding(2);
             this.updownEndSeconds.Maximum = new decimal(new int[] {
             59,
             0,
@@ -1317,7 +1321,7 @@
             // updownEndMinutes
             // 
             this.updownEndMinutes.Location = new System.Drawing.Point(98, 36);
-            this.updownEndMinutes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updownEndMinutes.Margin = new System.Windows.Forms.Padding(2);
             this.updownEndMinutes.Maximum = new decimal(new int[] {
             59,
             0,
@@ -1331,7 +1335,7 @@
             // updownEndHours
             // 
             this.updownEndHours.Location = new System.Drawing.Point(58, 36);
-            this.updownEndHours.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updownEndHours.Margin = new System.Windows.Forms.Padding(2);
             this.updownEndHours.Name = "updownEndHours";
             this.updownEndHours.Size = new System.Drawing.Size(35, 20);
             this.updownEndHours.TabIndex = 2;
@@ -1341,7 +1345,7 @@
             // 
             this.rbProcessingEndToPoint.AutoSize = true;
             this.rbProcessingEndToPoint.Location = new System.Drawing.Point(4, 37);
-            this.rbProcessingEndToPoint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbProcessingEndToPoint.Margin = new System.Windows.Forms.Padding(2);
             this.rbProcessingEndToPoint.Name = "rbProcessingEndToPoint";
             this.rbProcessingEndToPoint.Size = new System.Drawing.Size(56, 17);
             this.rbProcessingEndToPoint.TabIndex = 1;
@@ -1354,7 +1358,7 @@
             this.rbProcessingEndToFinish.AutoSize = true;
             this.rbProcessingEndToFinish.Checked = true;
             this.rbProcessingEndToFinish.Location = new System.Drawing.Point(4, 17);
-            this.rbProcessingEndToFinish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbProcessingEndToFinish.Margin = new System.Windows.Forms.Padding(2);
             this.rbProcessingEndToFinish.Name = "rbProcessingEndToFinish";
             this.rbProcessingEndToFinish.Size = new System.Drawing.Size(173, 17);
             this.rbProcessingEndToFinish.TabIndex = 0;
@@ -1372,9 +1376,9 @@
             this.groupBoxStartOfProcessing.Controls.Add(this.rbProcessingStartFromPoint);
             this.groupBoxStartOfProcessing.Controls.Add(this.rbProcessingStartFromBeginning);
             this.groupBoxStartOfProcessing.Location = new System.Drawing.Point(0, 263);
-            this.groupBoxStartOfProcessing.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxStartOfProcessing.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxStartOfProcessing.Name = "groupBoxStartOfProcessing";
-            this.groupBoxStartOfProcessing.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxStartOfProcessing.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxStartOfProcessing.Size = new System.Drawing.Size(195, 57);
             this.groupBoxStartOfProcessing.TabIndex = 6;
             this.groupBoxStartOfProcessing.TabStop = false;
@@ -1383,7 +1387,7 @@
             // updownStartSeconds
             // 
             this.updownStartSeconds.Location = new System.Drawing.Point(138, 36);
-            this.updownStartSeconds.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updownStartSeconds.Margin = new System.Windows.Forms.Padding(2);
             this.updownStartSeconds.Maximum = new decimal(new int[] {
             59,
             0,
@@ -1397,7 +1401,7 @@
             // updownStartMinutes
             // 
             this.updownStartMinutes.Location = new System.Drawing.Point(98, 35);
-            this.updownStartMinutes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updownStartMinutes.Margin = new System.Windows.Forms.Padding(2);
             this.updownStartMinutes.Maximum = new decimal(new int[] {
             59,
             0,
@@ -1411,7 +1415,7 @@
             // updownStartHours
             // 
             this.updownStartHours.Location = new System.Drawing.Point(58, 36);
-            this.updownStartHours.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updownStartHours.Margin = new System.Windows.Forms.Padding(2);
             this.updownStartHours.Name = "updownStartHours";
             this.updownStartHours.Size = new System.Drawing.Size(35, 20);
             this.updownStartHours.TabIndex = 2;
@@ -1421,7 +1425,7 @@
             // 
             this.rbProcessingStartFromPoint.AutoSize = true;
             this.rbProcessingStartFromPoint.Location = new System.Drawing.Point(4, 37);
-            this.rbProcessingStartFromPoint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbProcessingStartFromPoint.Margin = new System.Windows.Forms.Padding(2);
             this.rbProcessingStartFromPoint.Name = "rbProcessingStartFromPoint";
             this.rbProcessingStartFromPoint.Size = new System.Drawing.Size(59, 17);
             this.rbProcessingStartFromPoint.TabIndex = 1;
@@ -1434,7 +1438,7 @@
             this.rbProcessingStartFromBeginning.AutoSize = true;
             this.rbProcessingStartFromBeginning.Checked = true;
             this.rbProcessingStartFromBeginning.Location = new System.Drawing.Point(4, 17);
-            this.rbProcessingStartFromBeginning.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbProcessingStartFromBeginning.Margin = new System.Windows.Forms.Padding(2);
             this.rbProcessingStartFromBeginning.Name = "rbProcessingStartFromBeginning";
             this.rbProcessingStartFromBeginning.Size = new System.Drawing.Size(171, 17);
             this.rbProcessingStartFromBeginning.TabIndex = 0;
@@ -1452,9 +1456,9 @@
             this.groupBoxMode.Controls.Add(this.rbModeLive);
             this.groupBoxMode.Controls.Add(this.rbModeComplete);
             this.groupBoxMode.Location = new System.Drawing.Point(0, 215);
-            this.groupBoxMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxMode.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxMode.Name = "groupBoxMode";
-            this.groupBoxMode.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxMode.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxMode.Size = new System.Drawing.Size(748, 48);
             this.groupBoxMode.TabIndex = 5;
             this.groupBoxMode.TabStop = false;
@@ -1474,7 +1478,7 @@
             // upDwnLiveTimeouts
             // 
             this.upDwnLiveTimeouts.Location = new System.Drawing.Point(478, 19);
-            this.upDwnLiveTimeouts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.upDwnLiveTimeouts.Margin = new System.Windows.Forms.Padding(2);
             this.upDwnLiveTimeouts.Name = "upDwnLiveTimeouts";
             this.upDwnLiveTimeouts.Size = new System.Drawing.Size(43, 20);
             this.upDwnLiveTimeouts.TabIndex = 4;
@@ -1494,7 +1498,7 @@
             // 
             this.rbModeLive.AutoSize = true;
             this.rbModeLive.Location = new System.Drawing.Point(170, 17);
-            this.rbModeLive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbModeLive.Margin = new System.Windows.Forms.Padding(2);
             this.rbModeLive.Name = "rbModeLive";
             this.rbModeLive.Size = new System.Drawing.Size(309, 17);
             this.rbModeLive.TabIndex = 1;
@@ -1507,7 +1511,7 @@
             this.rbModeComplete.AutoSize = true;
             this.rbModeComplete.Checked = true;
             this.rbModeComplete.Location = new System.Drawing.Point(2, 17);
-            this.rbModeComplete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbModeComplete.Margin = new System.Windows.Forms.Padding(2);
             this.rbModeComplete.Name = "rbModeComplete";
             this.rbModeComplete.Size = new System.Drawing.Size(157, 17);
             this.rbModeComplete.TabIndex = 0;
@@ -1524,9 +1528,9 @@
             this.groupBoxSplitType.Controls.Add(this.rbSplitVideoTool);
             this.groupBoxSplitType.Controls.Add(this.rbSplitIndividual);
             this.groupBoxSplitType.Location = new System.Drawing.Point(0, 87);
-            this.groupBoxSplitType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxSplitType.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxSplitType.Name = "groupBoxSplitType";
-            this.groupBoxSplitType.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxSplitType.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxSplitType.Size = new System.Drawing.Size(748, 128);
             this.groupBoxSplitType.TabIndex = 1;
             this.groupBoxSplitType.TabStop = false;
@@ -1547,7 +1551,7 @@
             // 
             this.rbSplitGeneric.AutoSize = true;
             this.rbSplitGeneric.Location = new System.Drawing.Point(4, 61);
-            this.rbSplitGeneric.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbSplitGeneric.Margin = new System.Windows.Forms.Padding(2);
             this.rbSplitGeneric.Name = "rbSplitGeneric";
             this.rbSplitGeneric.Size = new System.Drawing.Size(360, 17);
             this.rbSplitGeneric.TabIndex = 2;
@@ -1559,7 +1563,7 @@
             // 
             this.rbSplitVideoTool.AutoSize = true;
             this.rbSplitVideoTool.Location = new System.Drawing.Point(4, 39);
-            this.rbSplitVideoTool.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbSplitVideoTool.Margin = new System.Windows.Forms.Padding(2);
             this.rbSplitVideoTool.Name = "rbSplitVideoTool";
             this.rbSplitVideoTool.Size = new System.Drawing.Size(359, 17);
             this.rbSplitVideoTool.TabIndex = 1;
@@ -1572,7 +1576,7 @@
             this.rbSplitIndividual.AutoSize = true;
             this.rbSplitIndividual.Checked = true;
             this.rbSplitIndividual.Location = new System.Drawing.Point(4, 17);
-            this.rbSplitIndividual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbSplitIndividual.Margin = new System.Windows.Forms.Padding(2);
             this.rbSplitIndividual.Name = "rbSplitIndividual";
             this.rbSplitIndividual.Size = new System.Drawing.Size(424, 17);
             this.rbSplitIndividual.TabIndex = 0;
@@ -1585,6 +1589,8 @@
             // groupBoxInputType
             // 
             this.groupBoxInputType.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBoxInputType.Controls.Add(this.rbInputTypeMXF);
+            this.groupBoxInputType.Controls.Add(this.rbInputTypeMKV);
             this.groupBoxInputType.Controls.Add(this.rbInputTypeM2TS);
             this.groupBoxInputType.Controls.Add(this.rbInputTypeWTV);
             this.groupBoxInputType.Controls.Add(this.rbInputTypeHexDump);
@@ -1597,22 +1603,34 @@
             this.groupBoxInputType.Controls.Add(this.rbInputTypeTransportStreams);
             this.groupBoxInputType.Controls.Add(this.rbInputTypeAutodetect);
             this.groupBoxInputType.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxInputType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxInputType.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxInputType.Name = "groupBoxInputType";
-            this.groupBoxInputType.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxInputType.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxInputType.Size = new System.Drawing.Size(748, 87);
             this.groupBoxInputType.TabIndex = 0;
             this.groupBoxInputType.TabStop = false;
             this.groupBoxInputType.Text = "Input type";
             // 
+            // rbInputTypeMKV
+            // 
+            this.rbInputTypeMKV.AutoSize = true;
+            this.rbInputTypeMKV.Location = new System.Drawing.Point(416, 60);
+            this.rbInputTypeMKV.Name = "rbInputTypeMKV";
+            this.rbInputTypeMKV.Size = new System.Drawing.Size(48, 17);
+            this.rbInputTypeMKV.TabIndex = 13;
+            this.rbInputTypeMKV.TabStop = true;
+            this.rbInputTypeMKV.Text = "MKV";
+            this.rbInputTypeMKV.UseVisualStyleBackColor = true;
+            this.rbInputTypeMKV.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
             // rbInputTypeM2TS
             // 
             this.rbInputTypeM2TS.AutoSize = true;
             this.rbInputTypeM2TS.Location = new System.Drawing.Point(293, 60);
-            this.rbInputTypeM2TS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbInputTypeM2TS.Margin = new System.Windows.Forms.Padding(2);
             this.rbInputTypeM2TS.Name = "rbInputTypeM2TS";
             this.rbInputTypeM2TS.Size = new System.Drawing.Size(54, 17);
-            this.rbInputTypeM2TS.TabIndex = 10;
+            this.rbInputTypeM2TS.TabIndex = 12;
             this.rbInputTypeM2TS.TabStop = true;
             this.rbInputTypeM2TS.Text = "M2TS";
             this.rbInputTypeM2TS.UseVisualStyleBackColor = true;
@@ -1622,10 +1640,10 @@
             // 
             this.rbInputTypeWTV.AutoSize = true;
             this.rbInputTypeWTV.Location = new System.Drawing.Point(170, 60);
-            this.rbInputTypeWTV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbInputTypeWTV.Margin = new System.Windows.Forms.Padding(2);
             this.rbInputTypeWTV.Name = "rbInputTypeWTV";
             this.rbInputTypeWTV.Size = new System.Drawing.Size(96, 17);
-            this.rbInputTypeWTV.TabIndex = 9;
+            this.rbInputTypeWTV.TabIndex = 11;
             this.rbInputTypeWTV.TabStop = true;
             this.rbInputTypeWTV.Text = "Microsoft WTV";
             this.rbInputTypeWTV.UseVisualStyleBackColor = true;
@@ -1635,10 +1653,10 @@
             // 
             this.rbInputTypeHexDump.AutoSize = true;
             this.rbInputTypeHexDump.Location = new System.Drawing.Point(4, 60);
-            this.rbInputTypeHexDump.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbInputTypeHexDump.Margin = new System.Windows.Forms.Padding(2);
             this.rbInputTypeHexDump.Name = "rbInputTypeHexDump";
             this.rbInputTypeHexDump.Size = new System.Drawing.Size(117, 17);
-            this.rbInputTypeHexDump.TabIndex = 8;
+            this.rbInputTypeHexDump.TabIndex = 10;
             this.rbInputTypeHexDump.TabStop = true;
             this.rbInputTypeHexDump.Text = "Hexadecimal Dump";
             this.rbInputTypeHexDump.UseVisualStyleBackColor = true;
@@ -1648,10 +1666,10 @@
             // 
             this.rbInputTypeMP4.AutoSize = true;
             this.rbInputTypeMP4.Location = new System.Drawing.Point(416, 39);
-            this.rbInputTypeMP4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbInputTypeMP4.Margin = new System.Windows.Forms.Padding(2);
             this.rbInputTypeMP4.Name = "rbInputTypeMP4";
             this.rbInputTypeMP4.Size = new System.Drawing.Size(47, 17);
-            this.rbInputTypeMP4.TabIndex = 7;
+            this.rbInputTypeMP4.TabIndex = 8;
             this.rbInputTypeMP4.TabStop = true;
             this.rbInputTypeMP4.Text = "MP4";
             this.rbInputTypeMP4.UseVisualStyleBackColor = true;
@@ -1661,21 +1679,22 @@
             // 
             this.rbInputTypeBin.AutoSize = true;
             this.rbInputTypeBin.Location = new System.Drawing.Point(416, 17);
-            this.rbInputTypeBin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbInputTypeBin.Margin = new System.Windows.Forms.Padding(2);
             this.rbInputTypeBin.Name = "rbInputTypeBin";
             this.rbInputTypeBin.Size = new System.Drawing.Size(114, 17);
             this.rbInputTypeBin.TabIndex = 3;
             this.rbInputTypeBin.Text = ".bin (CCExtractor\'s)";
             this.rbInputTypeBin.UseVisualStyleBackColor = true;
+            this.rbInputTypeBin.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
             // 
             // rbInputTypeMcPoodleRaw
             // 
             this.rbInputTypeMcPoodleRaw.AutoSize = true;
             this.rbInputTypeMcPoodleRaw.Location = new System.Drawing.Point(293, 39);
-            this.rbInputTypeMcPoodleRaw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbInputTypeMcPoodleRaw.Margin = new System.Windows.Forms.Padding(2);
             this.rbInputTypeMcPoodleRaw.Name = "rbInputTypeMcPoodleRaw";
             this.rbInputTypeMcPoodleRaw.Size = new System.Drawing.Size(109, 17);
-            this.rbInputTypeMcPoodleRaw.TabIndex = 6;
+            this.rbInputTypeMcPoodleRaw.TabIndex = 7;
             this.rbInputTypeMcPoodleRaw.Text = ".raw (McPoodle\'s)";
             this.rbInputTypeMcPoodleRaw.UseVisualStyleBackColor = true;
             this.rbInputTypeMcPoodleRaw.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
@@ -1684,7 +1703,7 @@
             // 
             this.rbInputTypeDVRMS.AutoSize = true;
             this.rbInputTypeDVRMS.Location = new System.Drawing.Point(293, 17);
-            this.rbInputTypeDVRMS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbInputTypeDVRMS.Margin = new System.Windows.Forms.Padding(2);
             this.rbInputTypeDVRMS.Name = "rbInputTypeDVRMS";
             this.rbInputTypeDVRMS.Size = new System.Drawing.Size(67, 17);
             this.rbInputTypeDVRMS.TabIndex = 2;
@@ -1696,10 +1715,10 @@
             // 
             this.rbInputTypeElementaryStreams.AutoSize = true;
             this.rbInputTypeElementaryStreams.Location = new System.Drawing.Point(170, 39);
-            this.rbInputTypeElementaryStreams.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbInputTypeElementaryStreams.Margin = new System.Windows.Forms.Padding(2);
             this.rbInputTypeElementaryStreams.Name = "rbInputTypeElementaryStreams";
             this.rbInputTypeElementaryStreams.Size = new System.Drawing.Size(113, 17);
-            this.rbInputTypeElementaryStreams.TabIndex = 5;
+            this.rbInputTypeElementaryStreams.TabIndex = 6;
             this.rbInputTypeElementaryStreams.Text = "Elementary Stream";
             this.rbInputTypeElementaryStreams.UseVisualStyleBackColor = true;
             this.rbInputTypeElementaryStreams.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
@@ -1708,7 +1727,7 @@
             // 
             this.rbInputTypeProgramStreams.AutoSize = true;
             this.rbInputTypeProgramStreams.Location = new System.Drawing.Point(170, 17);
-            this.rbInputTypeProgramStreams.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbInputTypeProgramStreams.Margin = new System.Windows.Forms.Padding(2);
             this.rbInputTypeProgramStreams.Name = "rbInputTypeProgramStreams";
             this.rbInputTypeProgramStreams.Size = new System.Drawing.Size(105, 17);
             this.rbInputTypeProgramStreams.TabIndex = 1;
@@ -1720,10 +1739,10 @@
             // 
             this.rbInputTypeTransportStreams.AutoSize = true;
             this.rbInputTypeTransportStreams.Location = new System.Drawing.Point(4, 39);
-            this.rbInputTypeTransportStreams.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbInputTypeTransportStreams.Margin = new System.Windows.Forms.Padding(2);
             this.rbInputTypeTransportStreams.Name = "rbInputTypeTransportStreams";
             this.rbInputTypeTransportStreams.Size = new System.Drawing.Size(106, 17);
-            this.rbInputTypeTransportStreams.TabIndex = 4;
+            this.rbInputTypeTransportStreams.TabIndex = 5;
             this.rbInputTypeTransportStreams.Text = "Transport Stream";
             this.rbInputTypeTransportStreams.UseVisualStyleBackColor = true;
             this.rbInputTypeTransportStreams.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
@@ -1733,7 +1752,7 @@
             this.rbInputTypeAutodetect.AutoSize = true;
             this.rbInputTypeAutodetect.Checked = true;
             this.rbInputTypeAutodetect.Location = new System.Drawing.Point(4, 17);
-            this.rbInputTypeAutodetect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbInputTypeAutodetect.Margin = new System.Windows.Forms.Padding(2);
             this.rbInputTypeAutodetect.Name = "rbInputTypeAutodetect";
             this.rbInputTypeAutodetect.Size = new System.Drawing.Size(163, 17);
             this.rbInputTypeAutodetect.TabIndex = 0;
@@ -1750,9 +1769,9 @@
             this.tabPageAdvancedInputOptions.Controls.Add(this.groupBoxMythTV);
             this.tabPageAdvancedInputOptions.Controls.Add(this.label2);
             this.tabPageAdvancedInputOptions.Location = new System.Drawing.Point(4, 22);
-            this.tabPageAdvancedInputOptions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageAdvancedInputOptions.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageAdvancedInputOptions.Name = "tabPageAdvancedInputOptions";
-            this.tabPageAdvancedInputOptions.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageAdvancedInputOptions.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageAdvancedInputOptions.Size = new System.Drawing.Size(746, 462);
             this.tabPageAdvancedInputOptions.TabIndex = 3;
             this.tabPageAdvancedInputOptions.Text = "Advanced input options";
@@ -1766,9 +1785,9 @@
             this.groupBoxAdvancedInputClock.Controls.Add(this.rbClockGOP);
             this.groupBoxAdvancedInputClock.Controls.Add(this.rbClockAuto);
             this.groupBoxAdvancedInputClock.Location = new System.Drawing.Point(0, 321);
-            this.groupBoxAdvancedInputClock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxAdvancedInputClock.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxAdvancedInputClock.Name = "groupBoxAdvancedInputClock";
-            this.groupBoxAdvancedInputClock.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxAdvancedInputClock.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxAdvancedInputClock.Size = new System.Drawing.Size(752, 85);
             this.groupBoxAdvancedInputClock.TabIndex = 5;
             this.groupBoxAdvancedInputClock.TabStop = false;
@@ -1787,7 +1806,7 @@
             // 
             this.rbClockPTS.AutoSize = true;
             this.rbClockPTS.Location = new System.Drawing.Point(146, 17);
-            this.rbClockPTS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbClockPTS.Margin = new System.Windows.Forms.Padding(2);
             this.rbClockPTS.Name = "rbClockPTS";
             this.rbClockPTS.Size = new System.Drawing.Size(46, 17);
             this.rbClockPTS.TabIndex = 2;
@@ -1799,7 +1818,7 @@
             // 
             this.rbClockGOP.AutoSize = true;
             this.rbClockGOP.Location = new System.Drawing.Point(70, 17);
-            this.rbClockGOP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbClockGOP.Margin = new System.Windows.Forms.Padding(2);
             this.rbClockGOP.Name = "rbClockGOP";
             this.rbClockGOP.Size = new System.Drawing.Size(48, 17);
             this.rbClockGOP.TabIndex = 1;
@@ -1812,7 +1831,7 @@
             this.rbClockAuto.AutoSize = true;
             this.rbClockAuto.Checked = true;
             this.rbClockAuto.Location = new System.Drawing.Point(7, 17);
-            this.rbClockAuto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbClockAuto.Margin = new System.Windows.Forms.Padding(2);
             this.rbClockAuto.Name = "rbClockAuto";
             this.rbClockAuto.Size = new System.Drawing.Size(47, 17);
             this.rbClockAuto.TabIndex = 0;
@@ -1828,9 +1847,9 @@
             this.groupBoxMultiprogramTS.Controls.Add(this.rbMultiProgramTSSelect);
             this.groupBoxMultiprogramTS.Controls.Add(this.tbProgramNumber);
             this.groupBoxMultiprogramTS.Location = new System.Drawing.Point(0, 406);
-            this.groupBoxMultiprogramTS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxMultiprogramTS.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxMultiprogramTS.Name = "groupBoxMultiprogramTS";
-            this.groupBoxMultiprogramTS.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxMultiprogramTS.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxMultiprogramTS.Size = new System.Drawing.Size(748, 60);
             this.groupBoxMultiprogramTS.TabIndex = 4;
             this.groupBoxMultiprogramTS.TabStop = false;
@@ -1842,7 +1861,7 @@
             this.rbMultiProgramTSAutoDetect.AutoSize = true;
             this.rbMultiProgramTSAutoDetect.Checked = true;
             this.rbMultiProgramTSAutoDetect.Location = new System.Drawing.Point(7, 40);
-            this.rbMultiProgramTSAutoDetect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbMultiProgramTSAutoDetect.Margin = new System.Windows.Forms.Padding(2);
             this.rbMultiProgramTSAutoDetect.Name = "rbMultiProgramTSAutoDetect";
             this.rbMultiProgramTSAutoDetect.Size = new System.Drawing.Size(428, 17);
             this.rbMultiProgramTSAutoDetect.TabIndex = 3;
@@ -1856,7 +1875,7 @@
             // 
             this.rbMultiProgramTSSelect.AutoSize = true;
             this.rbMultiProgramTSSelect.Location = new System.Drawing.Point(7, 18);
-            this.rbMultiProgramTSSelect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbMultiProgramTSSelect.Margin = new System.Windows.Forms.Padding(2);
             this.rbMultiProgramTSSelect.Name = "rbMultiProgramTSSelect";
             this.rbMultiProgramTSSelect.Size = new System.Drawing.Size(335, 17);
             this.rbMultiProgramTSSelect.TabIndex = 2;
@@ -1866,8 +1885,8 @@
             // 
             // tbProgramNumber
             // 
-            this.tbProgramNumber.Location = new System.Drawing.Point(340, 17);
-            this.tbProgramNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbProgramNumber.Location = new System.Drawing.Point(346, 15);
+            this.tbProgramNumber.Margin = new System.Windows.Forms.Padding(2);
             this.tbProgramNumber.Name = "tbProgramNumber";
             this.tbProgramNumber.Size = new System.Drawing.Size(76, 20);
             this.tbProgramNumber.TabIndex = 1;
@@ -1886,9 +1905,9 @@
             this.groupBoxAdvancedInputMisc.Controls.Add(this.cbFixPadding);
             this.groupBoxAdvancedInputMisc.Controls.Add(this.cbClock90090);
             this.groupBoxAdvancedInputMisc.Location = new System.Drawing.Point(0, 126);
-            this.groupBoxAdvancedInputMisc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxAdvancedInputMisc.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxAdvancedInputMisc.Name = "groupBoxAdvancedInputMisc";
-            this.groupBoxAdvancedInputMisc.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxAdvancedInputMisc.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxAdvancedInputMisc.Size = new System.Drawing.Size(748, 191);
             this.groupBoxAdvancedInputMisc.TabIndex = 3;
             this.groupBoxAdvancedInputMisc.TabStop = false;
@@ -1898,7 +1917,7 @@
             // 
             this.cb_ignore_scte20.AutoSize = true;
             this.cb_ignore_scte20.Location = new System.Drawing.Point(7, 168);
-            this.cb_ignore_scte20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_ignore_scte20.Margin = new System.Windows.Forms.Padding(2);
             this.cb_ignore_scte20.Name = "cb_ignore_scte20";
             this.cb_ignore_scte20.Size = new System.Drawing.Size(126, 17);
             this.cb_ignore_scte20.TabIndex = 7;
@@ -1910,7 +1929,7 @@
             // 
             this.cb_mp4vidtrack.AutoSize = true;
             this.cb_mp4vidtrack.Location = new System.Drawing.Point(7, 146);
-            this.cb_mp4vidtrack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_mp4vidtrack.Margin = new System.Windows.Forms.Padding(2);
             this.cb_mp4vidtrack.Name = "cb_mp4vidtrack";
             this.cb_mp4vidtrack.Size = new System.Drawing.Size(405, 17);
             this.cb_mp4vidtrack.TabIndex = 6;
@@ -1922,7 +1941,7 @@
             // 
             this.cb_use_pic_order_cnt.AutoSize = true;
             this.cb_use_pic_order_cnt.Location = new System.Drawing.Point(7, 124);
-            this.cb_use_pic_order_cnt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_use_pic_order_cnt.Margin = new System.Windows.Forms.Padding(2);
             this.cb_use_pic_order_cnt.Name = "cb_use_pic_order_cnt";
             this.cb_use_pic_order_cnt.Size = new System.Drawing.Size(410, 17);
             this.cb_use_pic_order_cnt.TabIndex = 5;
@@ -1934,7 +1953,7 @@
             // 
             this.cbHauppage.AutoSize = true;
             this.cbHauppage.Location = new System.Drawing.Point(7, 102);
-            this.cbHauppage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbHauppage.Margin = new System.Windows.Forms.Padding(2);
             this.cbHauppage.Name = "cbHauppage";
             this.cbHauppage.Size = new System.Drawing.Size(494, 17);
             this.cbHauppage.TabIndex = 4;
@@ -1947,7 +1966,7 @@
             // 
             this.cbWTVConversionFix.AutoSize = true;
             this.cbWTVConversionFix.Location = new System.Drawing.Point(7, 80);
-            this.cbWTVConversionFix.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWTVConversionFix.Margin = new System.Windows.Forms.Padding(2);
             this.cbWTVConversionFix.Name = "cbWTVConversionFix";
             this.cbWTVConversionFix.Size = new System.Drawing.Size(526, 17);
             this.cbWTVConversionFix.TabIndex = 3;
@@ -1960,7 +1979,7 @@
             // 
             this.cbLargeGOPs.AutoSize = true;
             this.cbLargeGOPs.Location = new System.Drawing.Point(7, 59);
-            this.cbLargeGOPs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbLargeGOPs.Margin = new System.Windows.Forms.Padding(2);
             this.cbLargeGOPs.Name = "cbLargeGOPs";
             this.cbLargeGOPs.Size = new System.Drawing.Size(354, 17);
             this.cbLargeGOPs.TabIndex = 2;
@@ -1972,7 +1991,7 @@
             // 
             this.cbFixPadding.AutoSize = true;
             this.cbFixPadding.Location = new System.Drawing.Point(7, 39);
-            this.cbFixPadding.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbFixPadding.Margin = new System.Windows.Forms.Padding(2);
             this.cbFixPadding.Name = "cbFixPadding";
             this.cbFixPadding.Size = new System.Drawing.Size(351, 17);
             this.cbFixPadding.TabIndex = 1;
@@ -1984,7 +2003,7 @@
             // 
             this.cbClock90090.AutoSize = true;
             this.cbClock90090.Location = new System.Drawing.Point(7, 17);
-            this.cbClock90090.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbClock90090.Margin = new System.Windows.Forms.Padding(2);
             this.cbClock90090.Name = "cbClock90090";
             this.cbClock90090.Size = new System.Drawing.Size(379, 17);
             this.cbClock90090.TabIndex = 0;
@@ -1999,9 +2018,9 @@
             this.groupBoxMythTV.Controls.Add(this.rbMythTVDisabled);
             this.groupBoxMythTV.Controls.Add(this.rbMythTVForced);
             this.groupBoxMythTV.Location = new System.Drawing.Point(0, 44);
-            this.groupBoxMythTV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxMythTV.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxMythTV.Name = "groupBoxMythTV";
-            this.groupBoxMythTV.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxMythTV.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxMythTV.Size = new System.Drawing.Size(748, 81);
             this.groupBoxMythTV.TabIndex = 2;
             this.groupBoxMythTV.TabStop = false;
@@ -2012,7 +2031,7 @@
             this.rbMythTVAuto.AutoSize = true;
             this.rbMythTVAuto.Checked = true;
             this.rbMythTVAuto.Location = new System.Drawing.Point(4, 59);
-            this.rbMythTVAuto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbMythTVAuto.Margin = new System.Windows.Forms.Padding(2);
             this.rbMythTVAuto.Name = "rbMythTVAuto";
             this.rbMythTVAuto.Size = new System.Drawing.Size(292, 17);
             this.rbMythTVAuto.TabIndex = 2;
@@ -2025,7 +2044,7 @@
             // 
             this.rbMythTVDisabled.AutoSize = true;
             this.rbMythTVDisabled.Location = new System.Drawing.Point(4, 39);
-            this.rbMythTVDisabled.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbMythTVDisabled.Margin = new System.Windows.Forms.Padding(2);
             this.rbMythTVDisabled.Name = "rbMythTVDisabled";
             this.rbMythTVDisabled.Size = new System.Drawing.Size(258, 17);
             this.rbMythTVDisabled.TabIndex = 1;
@@ -2037,7 +2056,7 @@
             // 
             this.rbMythTVForced.AutoSize = true;
             this.rbMythTVForced.Location = new System.Drawing.Point(4, 17);
-            this.rbMythTVForced.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbMythTVForced.Margin = new System.Windows.Forms.Padding(2);
             this.rbMythTVForced.Name = "rbMythTVForced";
             this.rbMythTVForced.Size = new System.Drawing.Size(442, 17);
             this.rbMythTVForced.TabIndex = 0;
@@ -2064,9 +2083,9 @@
             this.tabPageOutput.Controls.Add(this.groupBoxOutputFile);
             this.tabPageOutput.Controls.Add(this.groupBoxOutputType);
             this.tabPageOutput.Location = new System.Drawing.Point(4, 22);
-            this.tabPageOutput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageOutput.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageOutput.Name = "tabPageOutput";
-            this.tabPageOutput.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageOutput.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageOutput.Size = new System.Drawing.Size(746, 462);
             this.tabPageOutput.TabIndex = 1;
             this.tabPageOutput.Text = "Output (1)";
@@ -2077,9 +2096,9 @@
             this.groupBoxXDS.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBoxXDS.Controls.Add(this.cbExportXDS);
             this.groupBoxXDS.Location = new System.Drawing.Point(1, 193);
-            this.groupBoxXDS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxXDS.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxXDS.Name = "groupBoxXDS";
-            this.groupBoxXDS.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxXDS.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxXDS.Size = new System.Drawing.Size(748, 54);
             this.groupBoxXDS.TabIndex = 5;
             this.groupBoxXDS.TabStop = false;
@@ -2089,7 +2108,7 @@
             // 
             this.cbExportXDS.AutoSize = true;
             this.cbExportXDS.Location = new System.Drawing.Point(4, 17);
-            this.cbExportXDS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbExportXDS.Margin = new System.Windows.Forms.Padding(2);
             this.cbExportXDS.Name = "cbExportXDS";
             this.cbExportXDS.Size = new System.Drawing.Size(388, 17);
             this.cbExportXDS.TabIndex = 0;
@@ -2104,9 +2123,9 @@
             this.bgBOM.Controls.Add(this.rbBOMNo);
             this.bgBOM.Controls.Add(this.rbBOMYes);
             this.bgBOM.Location = new System.Drawing.Point(0, 346);
-            this.bgBOM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bgBOM.Margin = new System.Windows.Forms.Padding(2);
             this.bgBOM.Name = "bgBOM";
-            this.bgBOM.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bgBOM.Padding = new System.Windows.Forms.Padding(2);
             this.bgBOM.Size = new System.Drawing.Size(748, 46);
             this.bgBOM.TabIndex = 4;
             this.bgBOM.TabStop = false;
@@ -2116,7 +2135,7 @@
             // 
             this.rbBOMNo.AutoSize = true;
             this.rbBOMNo.Location = new System.Drawing.Point(324, 17);
-            this.rbBOMNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbBOMNo.Margin = new System.Windows.Forms.Padding(2);
             this.rbBOMNo.Name = "rbBOMNo";
             this.rbBOMNo.Size = new System.Drawing.Size(317, 17);
             this.rbBOMNo.TabIndex = 1;
@@ -2129,7 +2148,7 @@
             this.rbBOMYes.AutoSize = true;
             this.rbBOMYes.Checked = true;
             this.rbBOMYes.Location = new System.Drawing.Point(7, 17);
-            this.rbBOMYes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbBOMYes.Margin = new System.Windows.Forms.Padding(2);
             this.rbBOMYes.Name = "rbBOMYes";
             this.rbBOMYes.Size = new System.Drawing.Size(308, 17);
             this.rbBOMYes.TabIndex = 0;
@@ -2144,9 +2163,9 @@
             this.groupBoxTimeAdjust.Controls.Add(this.label7);
             this.groupBoxTimeAdjust.Controls.Add(this.upDwnDelay);
             this.groupBoxTimeAdjust.Location = new System.Drawing.Point(0, 392);
-            this.groupBoxTimeAdjust.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxTimeAdjust.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxTimeAdjust.Name = "groupBoxTimeAdjust";
-            this.groupBoxTimeAdjust.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxTimeAdjust.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxTimeAdjust.Size = new System.Drawing.Size(748, 49);
             this.groupBoxTimeAdjust.TabIndex = 3;
             this.groupBoxTimeAdjust.TabStop = false;
@@ -2166,7 +2185,7 @@
             // upDwnDelay
             // 
             this.upDwnDelay.Location = new System.Drawing.Point(7, 17);
-            this.upDwnDelay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.upDwnDelay.Margin = new System.Windows.Forms.Padding(2);
             this.upDwnDelay.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -2191,9 +2210,9 @@
             this.groupBoxOutputFile.Controls.Add(this.rbOutputNameManual);
             this.groupBoxOutputFile.Controls.Add(this.rbOutputNameAuto);
             this.groupBoxOutputFile.Location = new System.Drawing.Point(0, 247);
-            this.groupBoxOutputFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxOutputFile.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxOutputFile.Name = "groupBoxOutputFile";
-            this.groupBoxOutputFile.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxOutputFile.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxOutputFile.Size = new System.Drawing.Size(748, 99);
             this.groupBoxOutputFile.TabIndex = 2;
             this.groupBoxOutputFile.TabStop = false;
@@ -2212,7 +2231,7 @@
             // btnBrowseOutputFilename
             // 
             this.btnBrowseOutputFilename.Location = new System.Drawing.Point(438, 39);
-            this.btnBrowseOutputFilename.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBrowseOutputFilename.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowseOutputFilename.Name = "btnBrowseOutputFilename";
             this.btnBrowseOutputFilename.Size = new System.Drawing.Size(56, 21);
             this.btnBrowseOutputFilename.TabIndex = 3;
@@ -2223,7 +2242,7 @@
             // tbOutputFilename
             // 
             this.tbOutputFilename.Location = new System.Drawing.Point(150, 39);
-            this.tbOutputFilename.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbOutputFilename.Margin = new System.Windows.Forms.Padding(2);
             this.tbOutputFilename.Name = "tbOutputFilename";
             this.tbOutputFilename.Size = new System.Drawing.Size(266, 20);
             this.tbOutputFilename.TabIndex = 2;
@@ -2233,7 +2252,7 @@
             // 
             this.rbOutputNameManual.AutoSize = true;
             this.rbOutputNameManual.Location = new System.Drawing.Point(4, 39);
-            this.rbOutputNameManual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputNameManual.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputNameManual.Name = "rbOutputNameManual";
             this.rbOutputNameManual.Size = new System.Drawing.Size(144, 17);
             this.rbOutputNameManual.TabIndex = 1;
@@ -2246,7 +2265,7 @@
             this.rbOutputNameAuto.AutoSize = true;
             this.rbOutputNameAuto.Checked = true;
             this.rbOutputNameAuto.Location = new System.Drawing.Point(4, 17);
-            this.rbOutputNameAuto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputNameAuto.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputNameAuto.Name = "rbOutputNameAuto";
             this.rbOutputNameAuto.Size = new System.Drawing.Size(405, 17);
             this.rbOutputNameAuto.TabIndex = 0;
@@ -2259,6 +2278,8 @@
             // groupBoxOutputType
             // 
             this.groupBoxOutputType.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBoxOutputType.Controls.Add(this.rbOutputTypeWebVTTFull);
+            this.groupBoxOutputType.Controls.Add(this.rbOutputTypeWebVTT);
             this.groupBoxOutputType.Controls.Add(this.rbOutputTypeASS);
             this.groupBoxOutputType.Controls.Add(this.rbOutputTypeG608);
             this.groupBoxOutputType.Controls.Add(this.rbOutputTypeSimpleXML);
@@ -2274,30 +2295,55 @@
             this.groupBoxOutputType.Controls.Add(this.rbOutputTypeSAMI);
             this.groupBoxOutputType.Controls.Add(this.rbOutputTypeSRT);
             this.groupBoxOutputType.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxOutputType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxOutputType.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxOutputType.Name = "groupBoxOutputType";
-            this.groupBoxOutputType.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxOutputType.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxOutputType.Size = new System.Drawing.Size(748, 193);
             this.groupBoxOutputType.TabIndex = 1;
             this.groupBoxOutputType.TabStop = false;
             this.groupBoxOutputType.Text = "Output type";
             // 
+            // rbOutputTypeWebVTTFull
+            // 
+            this.rbOutputTypeWebVTTFull.AutoSize = true;
+            this.rbOutputTypeWebVTTFull.Location = new System.Drawing.Point(324, 170);
+            this.rbOutputTypeWebVTTFull.Name = "rbOutputTypeWebVTTFull";
+            this.rbOutputTypeWebVTTFull.Size = new System.Drawing.Size(123, 17);
+            this.rbOutputTypeWebVTTFull.TabIndex = 15;
+            this.rbOutputTypeWebVTTFull.TabStop = true;
+            this.rbOutputTypeWebVTTFull.Text = "WebVTT with styling";
+            this.rbOutputTypeWebVTTFull.UseVisualStyleBackColor = true;
+            this.rbOutputTypeWebVTTFull.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // rbOutputTypeWebVTT
+            // 
+            this.rbOutputTypeWebVTT.AutoSize = true;
+            this.rbOutputTypeWebVTT.Location = new System.Drawing.Point(7, 170);
+            this.rbOutputTypeWebVTT.Name = "rbOutputTypeWebVTT";
+            this.rbOutputTypeWebVTT.Size = new System.Drawing.Size(69, 17);
+            this.rbOutputTypeWebVTT.TabIndex = 14;
+            this.rbOutputTypeWebVTT.TabStop = true;
+            this.rbOutputTypeWebVTT.Text = "WebVTT";
+            this.rbOutputTypeWebVTT.UseVisualStyleBackColor = true;
+            this.rbOutputTypeWebVTT.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
             // rbOutputTypeASS
             // 
             this.rbOutputTypeASS.AutoSize = true;
             this.rbOutputTypeASS.Location = new System.Drawing.Point(324, 148);
-            this.rbOutputTypeASS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputTypeASS.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputTypeASS.Name = "rbOutputTypeASS";
             this.rbOutputTypeASS.Size = new System.Drawing.Size(135, 17);
             this.rbOutputTypeASS.TabIndex = 13;
             this.rbOutputTypeASS.Text = ".ass (SubStation Alpha)";
             this.rbOutputTypeASS.UseVisualStyleBackColor = true;
+            this.rbOutputTypeASS.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
             // 
             // rbOutputTypeG608
             // 
             this.rbOutputTypeG608.AutoSize = true;
             this.rbOutputTypeG608.Location = new System.Drawing.Point(7, 148);
-            this.rbOutputTypeG608.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputTypeG608.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputTypeG608.Name = "rbOutputTypeG608";
             this.rbOutputTypeG608.Size = new System.Drawing.Size(99, 17);
             this.rbOutputTypeG608.TabIndex = 12;
@@ -2310,7 +2356,7 @@
             // 
             this.rbOutputTypeSimpleXML.AutoSize = true;
             this.rbOutputTypeSimpleXML.Location = new System.Drawing.Point(324, 104);
-            this.rbOutputTypeSimpleXML.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputTypeSimpleXML.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputTypeSimpleXML.Name = "rbOutputTypeSimpleXML";
             this.rbOutputTypeSimpleXML.Size = new System.Drawing.Size(78, 17);
             this.rbOutputTypeSimpleXML.TabIndex = 9;
@@ -2323,7 +2369,7 @@
             // 
             this.rbOutputTypeReport.AutoSize = true;
             this.rbOutputTypeReport.Location = new System.Drawing.Point(324, 126);
-            this.rbOutputTypeReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputTypeReport.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputTypeReport.Name = "rbOutputTypeReport";
             this.rbOutputTypeReport.Size = new System.Drawing.Size(111, 17);
             this.rbOutputTypeReport.TabIndex = 11;
@@ -2336,7 +2382,7 @@
             // 
             this.rbOutputTypeSpuPNG.AutoSize = true;
             this.rbOutputTypeSpuPNG.Location = new System.Drawing.Point(324, 82);
-            this.rbOutputTypeSpuPNG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputTypeSpuPNG.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputTypeSpuPNG.Name = "rbOutputTypeSpuPNG";
             this.rbOutputTypeSpuPNG.Size = new System.Drawing.Size(60, 17);
             this.rbOutputTypeSpuPNG.TabIndex = 7;
@@ -2349,7 +2395,7 @@
             // 
             this.rbOutputTypeTTML.AutoSize = true;
             this.rbOutputTypeTTML.Location = new System.Drawing.Point(4, 104);
-            this.rbOutputTypeTTML.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputTypeTTML.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputTypeTTML.Name = "rbOutputTypeTTML";
             this.rbOutputTypeTTML.Size = new System.Drawing.Size(211, 17);
             this.rbOutputTypeTTML.TabIndex = 8;
@@ -2362,7 +2408,7 @@
             // 
             this.rbOutputTypeNull.AutoSize = true;
             this.rbOutputTypeNull.Location = new System.Drawing.Point(6, 126);
-            this.rbOutputTypeNull.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputTypeNull.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputTypeNull.Name = "rbOutputTypeNull";
             this.rbOutputTypeNull.Size = new System.Drawing.Size(156, 17);
             this.rbOutputTypeNull.TabIndex = 10;
@@ -2375,7 +2421,7 @@
             // 
             this.rbOutputTypeTimedTXT.AutoSize = true;
             this.rbOutputTypeTimedTXT.Location = new System.Drawing.Point(4, 82);
-            this.rbOutputTypeTimedTXT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputTypeTimedTXT.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputTypeTimedTXT.Name = "rbOutputTypeTimedTXT";
             this.rbOutputTypeTimedTXT.Size = new System.Drawing.Size(130, 17);
             this.rbOutputTypeTimedTXT.TabIndex = 6;
@@ -2388,7 +2434,7 @@
             // 
             this.rbOutputTypeBin.AutoSize = true;
             this.rbOutputTypeBin.Location = new System.Drawing.Point(324, 61);
-            this.rbOutputTypeBin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputTypeBin.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputTypeBin.Name = "rbOutputTypeBin";
             this.rbOutputTypeBin.Size = new System.Drawing.Size(198, 17);
             this.rbOutputTypeBin.TabIndex = 5;
@@ -2400,7 +2446,7 @@
             // 
             this.rbOutputTypeDVDRaw.AutoSize = true;
             this.rbOutputTypeDVDRaw.Location = new System.Drawing.Point(324, 39);
-            this.rbOutputTypeDVDRaw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputTypeDVDRaw.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputTypeDVDRaw.Name = "rbOutputTypeDVDRaw";
             this.rbOutputTypeDVDRaw.Size = new System.Drawing.Size(237, 17);
             this.rbOutputTypeDVDRaw.TabIndex = 3;
@@ -2412,7 +2458,7 @@
             // 
             this.rbOutputTypeRaw.AutoSize = true;
             this.rbOutputTypeRaw.Location = new System.Drawing.Point(324, 17);
-            this.rbOutputTypeRaw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputTypeRaw.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputTypeRaw.Name = "rbOutputTypeRaw";
             this.rbOutputTypeRaw.Size = new System.Drawing.Size(243, 17);
             this.rbOutputTypeRaw.TabIndex = 1;
@@ -2424,7 +2470,7 @@
             // 
             this.rbOutputTypeTXT.AutoSize = true;
             this.rbOutputTypeTXT.Location = new System.Drawing.Point(4, 61);
-            this.rbOutputTypeTXT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputTypeTXT.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputTypeTXT.Name = "rbOutputTypeTXT";
             this.rbOutputTypeTXT.Size = new System.Drawing.Size(143, 17);
             this.rbOutputTypeTXT.TabIndex = 4;
@@ -2436,7 +2482,7 @@
             // 
             this.rbOutputTypeSAMI.AutoSize = true;
             this.rbOutputTypeSAMI.Location = new System.Drawing.Point(4, 39);
-            this.rbOutputTypeSAMI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputTypeSAMI.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputTypeSAMI.Name = "rbOutputTypeSAMI";
             this.rbOutputTypeSAMI.Size = new System.Drawing.Size(314, 17);
             this.rbOutputTypeSAMI.TabIndex = 2;
@@ -2449,7 +2495,7 @@
             this.rbOutputTypeSRT.AutoSize = true;
             this.rbOutputTypeSRT.Checked = true;
             this.rbOutputTypeSRT.Location = new System.Drawing.Point(4, 17);
-            this.rbOutputTypeSRT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbOutputTypeSRT.Margin = new System.Windows.Forms.Padding(2);
             this.rbOutputTypeSRT.Name = "rbOutputTypeSRT";
             this.rbOutputTypeSRT.Size = new System.Drawing.Size(83, 17);
             this.rbOutputTypeSRT.TabIndex = 0;
@@ -2469,9 +2515,9 @@
             this.tabPageOutput2.Controls.Add(this.groupBoxColors);
             this.tabPageOutput2.Controls.Add(this.groupBoxEncoding);
             this.tabPageOutput2.Location = new System.Drawing.Point(4, 22);
-            this.tabPageOutput2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageOutput2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageOutput2.Name = "tabPageOutput2";
-            this.tabPageOutput2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageOutput2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageOutput2.Size = new System.Drawing.Size(746, 462);
             this.tabPageOutput2.TabIndex = 5;
             this.tabPageOutput2.Text = "Output (2)";
@@ -2483,9 +2529,9 @@
             this.groupBoxLineTerminator.Controls.Add(this.rbLineTerminatorUNIX);
             this.groupBoxLineTerminator.Controls.Add(this.rbLineTerminatorDOS);
             this.groupBoxLineTerminator.Location = new System.Drawing.Point(374, 389);
-            this.groupBoxLineTerminator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxLineTerminator.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxLineTerminator.Name = "groupBoxLineTerminator";
-            this.groupBoxLineTerminator.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxLineTerminator.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxLineTerminator.Size = new System.Drawing.Size(374, 67);
             this.groupBoxLineTerminator.TabIndex = 6;
             this.groupBoxLineTerminator.TabStop = false;
@@ -2495,7 +2541,7 @@
             // 
             this.rbLineTerminatorUNIX.AutoSize = true;
             this.rbLineTerminatorUNIX.Location = new System.Drawing.Point(7, 39);
-            this.rbLineTerminatorUNIX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbLineTerminatorUNIX.Margin = new System.Windows.Forms.Padding(2);
             this.rbLineTerminatorUNIX.Name = "rbLineTerminatorUNIX";
             this.rbLineTerminatorUNIX.Size = new System.Drawing.Size(72, 17);
             this.rbLineTerminatorUNIX.TabIndex = 1;
@@ -2508,7 +2554,7 @@
             this.rbLineTerminatorDOS.AutoSize = true;
             this.rbLineTerminatorDOS.Checked = true;
             this.rbLineTerminatorDOS.Location = new System.Drawing.Point(7, 17);
-            this.rbLineTerminatorDOS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbLineTerminatorDOS.Margin = new System.Windows.Forms.Padding(2);
             this.rbLineTerminatorDOS.Name = "rbLineTerminatorDOS";
             this.rbLineTerminatorDOS.Size = new System.Drawing.Size(133, 17);
             this.rbLineTerminatorDOS.TabIndex = 0;
@@ -2523,9 +2569,9 @@
             this.groupBoxExportTypeset.Controls.Add(this.rbDontExportTypesetting);
             this.groupBoxExportTypeset.Controls.Add(this.rbExportTypesetting);
             this.groupBoxExportTypeset.Location = new System.Drawing.Point(0, 389);
-            this.groupBoxExportTypeset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxExportTypeset.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxExportTypeset.Name = "groupBoxExportTypeset";
-            this.groupBoxExportTypeset.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxExportTypeset.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxExportTypeset.Size = new System.Drawing.Size(374, 67);
             this.groupBoxExportTypeset.TabIndex = 5;
             this.groupBoxExportTypeset.TabStop = false;
@@ -2535,7 +2581,7 @@
             // 
             this.rbDontExportTypesetting.AutoSize = true;
             this.rbDontExportTypesetting.Location = new System.Drawing.Point(7, 39);
-            this.rbDontExportTypesetting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbDontExportTypesetting.Margin = new System.Windows.Forms.Padding(2);
             this.rbDontExportTypesetting.Name = "rbDontExportTypesetting";
             this.rbDontExportTypesetting.Size = new System.Drawing.Size(171, 17);
             this.rbDontExportTypesetting.TabIndex = 1;
@@ -2548,7 +2594,7 @@
             this.rbExportTypesetting.AutoSize = true;
             this.rbExportTypesetting.Checked = true;
             this.rbExportTypesetting.Location = new System.Drawing.Point(7, 17);
-            this.rbExportTypesetting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbExportTypesetting.Margin = new System.Windows.Forms.Padding(2);
             this.rbExportTypesetting.Name = "rbExportTypesetting";
             this.rbExportTypesetting.Size = new System.Drawing.Size(226, 17);
             this.rbExportTypesetting.TabIndex = 0;
@@ -2567,9 +2613,9 @@
             this.groupBoxRollup.Controls.Add(this.cbRollupNoDupeLines);
             this.groupBoxRollup.Controls.Add(this.cbRollupRealtime);
             this.groupBoxRollup.Location = new System.Drawing.Point(0, 266);
-            this.groupBoxRollup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxRollup.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxRollup.Name = "groupBoxRollup";
-            this.groupBoxRollup.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxRollup.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxRollup.Size = new System.Drawing.Size(748, 124);
             this.groupBoxRollup.TabIndex = 4;
             this.groupBoxRollup.TabStop = false;
@@ -2579,7 +2625,7 @@
             // 
             this.rbRollUpLinesLimit1.AutoSize = true;
             this.rbRollUpLinesLimit1.Location = new System.Drawing.Point(525, 85);
-            this.rbRollUpLinesLimit1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbRollUpLinesLimit1.Margin = new System.Windows.Forms.Padding(2);
             this.rbRollUpLinesLimit1.Name = "rbRollUpLinesLimit1";
             this.rbRollUpLinesLimit1.Size = new System.Drawing.Size(50, 17);
             this.rbRollUpLinesLimit1.TabIndex = 6;
@@ -2592,7 +2638,7 @@
             // 
             this.rbRollUpLinesLimit2.AutoSize = true;
             this.rbRollUpLinesLimit2.Location = new System.Drawing.Point(468, 85);
-            this.rbRollUpLinesLimit2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbRollUpLinesLimit2.Margin = new System.Windows.Forms.Padding(2);
             this.rbRollUpLinesLimit2.Name = "rbRollUpLinesLimit2";
             this.rbRollUpLinesLimit2.Size = new System.Drawing.Size(55, 17);
             this.rbRollUpLinesLimit2.TabIndex = 5;
@@ -2604,7 +2650,7 @@
             // 
             this.rbRollUpLinesLimit3.AutoSize = true;
             this.rbRollUpLinesLimit3.Location = new System.Drawing.Point(411, 85);
-            this.rbRollUpLinesLimit3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbRollUpLinesLimit3.Margin = new System.Windows.Forms.Padding(2);
             this.rbRollUpLinesLimit3.Name = "rbRollUpLinesLimit3";
             this.rbRollUpLinesLimit3.Size = new System.Drawing.Size(55, 17);
             this.rbRollUpLinesLimit3.TabIndex = 4;
@@ -2617,7 +2663,7 @@
             this.rbRollUpLinesLimitNone.AutoSize = true;
             this.rbRollUpLinesLimitNone.Checked = true;
             this.rbRollUpLinesLimitNone.Location = new System.Drawing.Point(226, 85);
-            this.rbRollUpLinesLimitNone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbRollUpLinesLimitNone.Margin = new System.Windows.Forms.Padding(2);
             this.rbRollUpLinesLimitNone.Name = "rbRollUpLinesLimitNone";
             this.rbRollUpLinesLimitNone.Size = new System.Drawing.Size(181, 17);
             this.rbRollUpLinesLimitNone.TabIndex = 3;
@@ -2639,7 +2685,7 @@
             // cbRollupNoDupeLines
             // 
             this.cbRollupNoDupeLines.Location = new System.Drawing.Point(4, 51);
-            this.cbRollupNoDupeLines.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbRollupNoDupeLines.Margin = new System.Windows.Forms.Padding(2);
             this.cbRollupNoDupeLines.Name = "cbRollupNoDupeLines";
             this.cbRollupNoDupeLines.Size = new System.Drawing.Size(568, 34);
             this.cbRollupNoDupeLines.TabIndex = 1;
@@ -2650,7 +2696,7 @@
             // cbRollupRealtime
             // 
             this.cbRollupRealtime.Location = new System.Drawing.Point(4, 17);
-            this.cbRollupRealtime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbRollupRealtime.Margin = new System.Windows.Forms.Padding(2);
             this.cbRollupRealtime.Name = "cbRollupRealtime";
             this.cbRollupRealtime.Size = new System.Drawing.Size(567, 37);
             this.cbRollupRealtime.TabIndex = 0;
@@ -2669,9 +2715,9 @@
             this.groupBoxSentenceCase.Controls.Add(this.rbSentenceCaseDefault);
             this.groupBoxSentenceCase.Controls.Add(this.rbSentenceCaseNone);
             this.groupBoxSentenceCase.Location = new System.Drawing.Point(0, 183);
-            this.groupBoxSentenceCase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxSentenceCase.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxSentenceCase.Name = "groupBoxSentenceCase";
-            this.groupBoxSentenceCase.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxSentenceCase.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxSentenceCase.Size = new System.Drawing.Size(748, 84);
             this.groupBoxSentenceCase.TabIndex = 3;
             this.groupBoxSentenceCase.TabStop = false;
@@ -2680,7 +2726,7 @@
             // btnBrowseCapitalizationWords
             // 
             this.btnBrowseCapitalizationWords.Location = new System.Drawing.Point(493, 59);
-            this.btnBrowseCapitalizationWords.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBrowseCapitalizationWords.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowseCapitalizationWords.Name = "btnBrowseCapitalizationWords";
             this.btnBrowseCapitalizationWords.Size = new System.Drawing.Size(74, 19);
             this.btnBrowseCapitalizationWords.TabIndex = 4;
@@ -2691,7 +2737,7 @@
             // tbCapitalizationWordsFilename
             // 
             this.tbCapitalizationWordsFilename.Location = new System.Drawing.Point(330, 61);
-            this.tbCapitalizationWordsFilename.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCapitalizationWordsFilename.Margin = new System.Windows.Forms.Padding(2);
             this.tbCapitalizationWordsFilename.Name = "tbCapitalizationWordsFilename";
             this.tbCapitalizationWordsFilename.Size = new System.Drawing.Size(159, 20);
             this.tbCapitalizationWordsFilename.TabIndex = 3;
@@ -2701,7 +2747,7 @@
             // 
             this.cbSentenceCaseExtraList.AutoSize = true;
             this.cbSentenceCaseExtraList.Location = new System.Drawing.Point(139, 61);
-            this.cbSentenceCaseExtraList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbSentenceCaseExtraList.Margin = new System.Windows.Forms.Padding(2);
             this.cbSentenceCaseExtraList.Name = "cbSentenceCaseExtraList";
             this.cbSentenceCaseExtraList.Size = new System.Drawing.Size(188, 17);
             this.cbSentenceCaseExtraList.TabIndex = 2;
@@ -2713,7 +2759,7 @@
             // 
             this.rbSentenceCaseDefault.AutoSize = true;
             this.rbSentenceCaseDefault.Location = new System.Drawing.Point(4, 39);
-            this.rbSentenceCaseDefault.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbSentenceCaseDefault.Margin = new System.Windows.Forms.Padding(2);
             this.rbSentenceCaseDefault.Name = "rbSentenceCaseDefault";
             this.rbSentenceCaseDefault.Size = new System.Drawing.Size(556, 17);
             this.rbSentenceCaseDefault.TabIndex = 1;
@@ -2727,7 +2773,7 @@
             this.rbSentenceCaseNone.AutoSize = true;
             this.rbSentenceCaseNone.Checked = true;
             this.rbSentenceCaseNone.Location = new System.Drawing.Point(4, 17);
-            this.rbSentenceCaseNone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbSentenceCaseNone.Margin = new System.Windows.Forms.Padding(2);
             this.rbSentenceCaseNone.Name = "rbSentenceCaseNone";
             this.rbSentenceCaseNone.Size = new System.Drawing.Size(323, 17);
             this.rbSentenceCaseNone.TabIndex = 0;
@@ -2743,9 +2789,9 @@
             this.groupBoxTextPosition.Controls.Add(this.rbTextPositionCenter);
             this.groupBoxTextPosition.Controls.Add(this.rbTextPositionOriginal);
             this.groupBoxTextPosition.Location = new System.Drawing.Point(0, 83);
-            this.groupBoxTextPosition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxTextPosition.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxTextPosition.Name = "groupBoxTextPosition";
-            this.groupBoxTextPosition.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxTextPosition.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxTextPosition.Size = new System.Drawing.Size(748, 100);
             this.groupBoxTextPosition.TabIndex = 2;
             this.groupBoxTextPosition.TabStop = false;
@@ -2755,7 +2801,7 @@
             // 
             this.cbAutoDash.AutoSize = true;
             this.cbAutoDash.Location = new System.Drawing.Point(94, 60);
-            this.cbAutoDash.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbAutoDash.Margin = new System.Windows.Forms.Padding(2);
             this.cbAutoDash.Name = "cbAutoDash";
             this.cbAutoDash.Size = new System.Drawing.Size(349, 17);
             this.cbAutoDash.TabIndex = 2;
@@ -2767,7 +2813,7 @@
             // 
             this.rbTextPositionCenter.AutoSize = true;
             this.rbTextPositionCenter.Location = new System.Drawing.Point(7, 39);
-            this.rbTextPositionCenter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbTextPositionCenter.Margin = new System.Windows.Forms.Padding(2);
             this.rbTextPositionCenter.Name = "rbTextPositionCenter";
             this.rbTextPositionCenter.Size = new System.Drawing.Size(234, 17);
             this.rbTextPositionCenter.TabIndex = 1;
@@ -2780,7 +2826,7 @@
             this.rbTextPositionOriginal.AutoSize = true;
             this.rbTextPositionOriginal.Checked = true;
             this.rbTextPositionOriginal.Location = new System.Drawing.Point(7, 17);
-            this.rbTextPositionOriginal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbTextPositionOriginal.Margin = new System.Windows.Forms.Padding(2);
             this.rbTextPositionOriginal.Name = "rbTextPositionOriginal";
             this.rbTextPositionOriginal.Size = new System.Drawing.Size(518, 17);
             this.rbTextPositionOriginal.TabIndex = 0;
@@ -2798,9 +2844,9 @@
             this.groupBoxColors.Controls.Add(this.rbColorsDefault);
             this.groupBoxColors.Controls.Add(this.rbColorsDisable);
             this.groupBoxColors.Location = new System.Drawing.Point(94, 0);
-            this.groupBoxColors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxColors.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxColors.Name = "groupBoxColors";
-            this.groupBoxColors.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxColors.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxColors.Size = new System.Drawing.Size(655, 83);
             this.groupBoxColors.TabIndex = 1;
             this.groupBoxColors.TabStop = false;
@@ -2809,7 +2855,7 @@
             // tbDecoderColor
             // 
             this.tbDecoderColor.Location = new System.Drawing.Point(390, 60);
-            this.tbDecoderColor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbDecoderColor.Margin = new System.Windows.Forms.Padding(2);
             this.tbDecoderColor.MaxLength = 6;
             this.tbDecoderColor.Name = "tbDecoderColor";
             this.tbDecoderColor.Size = new System.Drawing.Size(76, 20);
@@ -2820,7 +2866,7 @@
             // 
             this.rbColorsReplace.AutoSize = true;
             this.rbColorsReplace.Location = new System.Drawing.Point(4, 61);
-            this.rbColorsReplace.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbColorsReplace.Margin = new System.Windows.Forms.Padding(2);
             this.rbColorsReplace.Name = "rbColorsReplace";
             this.rbColorsReplace.Size = new System.Drawing.Size(386, 17);
             this.rbColorsReplace.TabIndex = 2;
@@ -2833,7 +2879,7 @@
             this.rbColorsDefault.AutoSize = true;
             this.rbColorsDefault.Checked = true;
             this.rbColorsDefault.Location = new System.Drawing.Point(4, 39);
-            this.rbColorsDefault.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbColorsDefault.Margin = new System.Windows.Forms.Padding(2);
             this.rbColorsDefault.Name = "rbColorsDefault";
             this.rbColorsDefault.Size = new System.Drawing.Size(421, 17);
             this.rbColorsDefault.TabIndex = 1;
@@ -2847,7 +2893,7 @@
             // 
             this.rbColorsDisable.AutoSize = true;
             this.rbColorsDisable.Location = new System.Drawing.Point(4, 17);
-            this.rbColorsDisable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbColorsDisable.Margin = new System.Windows.Forms.Padding(2);
             this.rbColorsDisable.Name = "rbColorsDisable";
             this.rbColorsDisable.Size = new System.Drawing.Size(221, 17);
             this.rbColorsDisable.TabIndex = 0;
@@ -2862,9 +2908,9 @@
             this.groupBoxEncoding.Controls.Add(this.rbEncodingUTF8);
             this.groupBoxEncoding.Controls.Add(this.rbEncodingLatin1);
             this.groupBoxEncoding.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxEncoding.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxEncoding.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxEncoding.Name = "groupBoxEncoding";
-            this.groupBoxEncoding.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxEncoding.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxEncoding.Size = new System.Drawing.Size(94, 83);
             this.groupBoxEncoding.TabIndex = 0;
             this.groupBoxEncoding.TabStop = false;
@@ -2874,7 +2920,7 @@
             // 
             this.rbEncodingUnicode.AutoSize = true;
             this.rbEncodingUnicode.Location = new System.Drawing.Point(4, 61);
-            this.rbEncodingUnicode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbEncodingUnicode.Margin = new System.Windows.Forms.Padding(2);
             this.rbEncodingUnicode.Name = "rbEncodingUnicode";
             this.rbEncodingUnicode.Size = new System.Drawing.Size(65, 17);
             this.rbEncodingUnicode.TabIndex = 2;
@@ -2887,7 +2933,7 @@
             this.rbEncodingUTF8.AutoSize = true;
             this.rbEncodingUTF8.Checked = true;
             this.rbEncodingUTF8.Location = new System.Drawing.Point(4, 39);
-            this.rbEncodingUTF8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbEncodingUTF8.Margin = new System.Windows.Forms.Padding(2);
             this.rbEncodingUTF8.Name = "rbEncodingUTF8";
             this.rbEncodingUTF8.Size = new System.Drawing.Size(55, 17);
             this.rbEncodingUTF8.TabIndex = 1;
@@ -2900,7 +2946,7 @@
             // 
             this.rbEncodingLatin1.AutoSize = true;
             this.rbEncodingLatin1.Location = new System.Drawing.Point(4, 17);
-            this.rbEncodingLatin1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbEncodingLatin1.Margin = new System.Windows.Forms.Padding(2);
             this.rbEncodingLatin1.Name = "rbEncodingLatin1";
             this.rbEncodingLatin1.Size = new System.Drawing.Size(57, 17);
             this.rbEncodingLatin1.TabIndex = 0;
@@ -2914,9 +2960,9 @@
             this.tabPageCredits.Controls.Add(this.groupBoxEndCredits);
             this.tabPageCredits.Controls.Add(this.groupBoxStartingCredits);
             this.tabPageCredits.Location = new System.Drawing.Point(4, 22);
-            this.tabPageCredits.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageCredits.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageCredits.Name = "tabPageCredits";
-            this.tabPageCredits.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageCredits.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageCredits.Size = new System.Drawing.Size(746, 462);
             this.tabPageCredits.TabIndex = 8;
             this.tabPageCredits.Text = "Credits";
@@ -2927,7 +2973,7 @@
             this.panel1.BackColor = System.Drawing.Color.OldLace;
             this.panel1.Controls.Add(this.label34);
             this.panel1.Location = new System.Drawing.Point(0, 274);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(752, 53);
             this.panel1.TabIndex = 15;
@@ -2955,9 +3001,9 @@
             this.groupBoxEndCredits.Controls.Add(this.tbEndCredits);
             this.groupBoxEndCredits.Controls.Add(this.cbWriteEndText);
             this.groupBoxEndCredits.Location = new System.Drawing.Point(0, 150);
-            this.groupBoxEndCredits.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxEndCredits.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxEndCredits.Name = "groupBoxEndCredits";
-            this.groupBoxEndCredits.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxEndCredits.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxEndCredits.Size = new System.Drawing.Size(748, 124);
             this.groupBoxEndCredits.TabIndex = 14;
             this.groupBoxEndCredits.TabStop = false;
@@ -2976,7 +3022,7 @@
             // updownEndCreditsMaxDisplayedSS
             // 
             this.updownEndCreditsMaxDisplayedSS.Location = new System.Drawing.Point(294, 97);
-            this.updownEndCreditsMaxDisplayedSS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updownEndCreditsMaxDisplayedSS.Margin = new System.Windows.Forms.Padding(2);
             this.updownEndCreditsMaxDisplayedSS.Name = "updownEndCreditsMaxDisplayedSS";
             this.updownEndCreditsMaxDisplayedSS.Size = new System.Drawing.Size(35, 20);
             this.updownEndCreditsMaxDisplayedSS.TabIndex = 12;
@@ -2995,7 +3041,7 @@
             // updownEndCreditsMinDisplayedSS
             // 
             this.updownEndCreditsMinDisplayedSS.Location = new System.Drawing.Point(182, 97);
-            this.updownEndCreditsMinDisplayedSS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updownEndCreditsMinDisplayedSS.Margin = new System.Windows.Forms.Padding(2);
             this.updownEndCreditsMinDisplayedSS.Name = "updownEndCreditsMinDisplayedSS";
             this.updownEndCreditsMinDisplayedSS.Size = new System.Drawing.Size(35, 20);
             this.updownEndCreditsMinDisplayedSS.TabIndex = 10;
@@ -3014,7 +3060,7 @@
             // tbEndCredits
             // 
             this.tbEndCredits.Location = new System.Drawing.Point(22, 39);
-            this.tbEndCredits.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEndCredits.Margin = new System.Windows.Forms.Padding(2);
             this.tbEndCredits.Multiline = true;
             this.tbEndCredits.Name = "tbEndCredits";
             this.tbEndCredits.Size = new System.Drawing.Size(542, 56);
@@ -3025,7 +3071,7 @@
             // 
             this.cbWriteEndText.AutoSize = true;
             this.cbWriteEndText.Location = new System.Drawing.Point(4, 17);
-            this.cbWriteEndText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWriteEndText.Margin = new System.Windows.Forms.Padding(2);
             this.cbWriteEndText.Name = "cbWriteEndText";
             this.cbWriteEndText.Size = new System.Drawing.Size(481, 17);
             this.cbWriteEndText.TabIndex = 0;
@@ -3051,9 +3097,9 @@
             this.groupBoxStartingCredits.Controls.Add(this.tbStartCredits);
             this.groupBoxStartingCredits.Controls.Add(this.cbWriteStartingText);
             this.groupBoxStartingCredits.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxStartingCredits.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxStartingCredits.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxStartingCredits.Name = "groupBoxStartingCredits";
-            this.groupBoxStartingCredits.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxStartingCredits.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxStartingCredits.Size = new System.Drawing.Size(752, 150);
             this.groupBoxStartingCredits.TabIndex = 0;
             this.groupBoxStartingCredits.TabStop = false;
@@ -3072,7 +3118,7 @@
             // updownStartCreditsMaxDisplayedSS
             // 
             this.updownStartCreditsMaxDisplayedSS.Location = new System.Drawing.Point(296, 128);
-            this.updownStartCreditsMaxDisplayedSS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updownStartCreditsMaxDisplayedSS.Margin = new System.Windows.Forms.Padding(2);
             this.updownStartCreditsMaxDisplayedSS.Name = "updownStartCreditsMaxDisplayedSS";
             this.updownStartCreditsMaxDisplayedSS.Size = new System.Drawing.Size(35, 20);
             this.updownStartCreditsMaxDisplayedSS.TabIndex = 12;
@@ -3091,7 +3137,7 @@
             // updownStartCreditsMinDisplayedSS
             // 
             this.updownStartCreditsMinDisplayedSS.Location = new System.Drawing.Point(184, 128);
-            this.updownStartCreditsMinDisplayedSS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updownStartCreditsMinDisplayedSS.Margin = new System.Windows.Forms.Padding(2);
             this.updownStartCreditsMinDisplayedSS.Name = "updownStartCreditsMinDisplayedSS";
             this.updownStartCreditsMinDisplayedSS.Size = new System.Drawing.Size(35, 20);
             this.updownStartCreditsMinDisplayedSS.TabIndex = 10;
@@ -3110,7 +3156,7 @@
             // updownStartCreditsNotAfterSS
             // 
             this.updownStartCreditsNotAfterSS.Location = new System.Drawing.Point(420, 94);
-            this.updownStartCreditsNotAfterSS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updownStartCreditsNotAfterSS.Margin = new System.Windows.Forms.Padding(2);
             this.updownStartCreditsNotAfterSS.Maximum = new decimal(new int[] {
             59,
             0,
@@ -3124,7 +3170,7 @@
             // updownStartCreditsNotAfterMM
             // 
             this.updownStartCreditsNotAfterMM.Location = new System.Drawing.Point(380, 95);
-            this.updownStartCreditsNotAfterMM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updownStartCreditsNotAfterMM.Margin = new System.Windows.Forms.Padding(2);
             this.updownStartCreditsNotAfterMM.Name = "updownStartCreditsNotAfterMM";
             this.updownStartCreditsNotAfterMM.Size = new System.Drawing.Size(35, 20);
             this.updownStartCreditsNotAfterMM.TabIndex = 7;
@@ -3134,7 +3180,7 @@
             // 
             this.cbbStartCreditsNotLaterThan.AutoSize = true;
             this.cbbStartCreditsNotLaterThan.Location = new System.Drawing.Point(277, 96);
-            this.cbbStartCreditsNotLaterThan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbStartCreditsNotLaterThan.Margin = new System.Windows.Forms.Padding(2);
             this.cbbStartCreditsNotLaterThan.Name = "cbbStartCreditsNotLaterThan";
             this.cbbStartCreditsNotLaterThan.Size = new System.Drawing.Size(111, 17);
             this.cbbStartCreditsNotLaterThan.TabIndex = 6;
@@ -3145,7 +3191,7 @@
             // updownStartCreditsNotBeforeSS
             // 
             this.updownStartCreditsNotBeforeSS.Location = new System.Drawing.Point(184, 94);
-            this.updownStartCreditsNotBeforeSS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updownStartCreditsNotBeforeSS.Margin = new System.Windows.Forms.Padding(2);
             this.updownStartCreditsNotBeforeSS.Maximum = new decimal(new int[] {
             59,
             0,
@@ -3159,7 +3205,7 @@
             // updownStartCreditsNotBeforeMM
             // 
             this.updownStartCreditsNotBeforeMM.Location = new System.Drawing.Point(144, 95);
-            this.updownStartCreditsNotBeforeMM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updownStartCreditsNotBeforeMM.Margin = new System.Windows.Forms.Padding(2);
             this.updownStartCreditsNotBeforeMM.Name = "updownStartCreditsNotBeforeMM";
             this.updownStartCreditsNotBeforeMM.Size = new System.Drawing.Size(35, 20);
             this.updownStartCreditsNotBeforeMM.TabIndex = 4;
@@ -3169,7 +3215,7 @@
             // 
             this.cbbStartCreditsNotBeforeThan.AutoSize = true;
             this.cbbStartCreditsNotBeforeThan.Location = new System.Drawing.Point(22, 95);
-            this.cbbStartCreditsNotBeforeThan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbStartCreditsNotBeforeThan.Margin = new System.Windows.Forms.Padding(2);
             this.cbbStartCreditsNotBeforeThan.Name = "cbbStartCreditsNotBeforeThan";
             this.cbbStartCreditsNotBeforeThan.Size = new System.Drawing.Size(120, 17);
             this.cbbStartCreditsNotBeforeThan.TabIndex = 2;
@@ -3180,7 +3226,7 @@
             // tbStartCredits
             // 
             this.tbStartCredits.Location = new System.Drawing.Point(22, 39);
-            this.tbStartCredits.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStartCredits.Margin = new System.Windows.Forms.Padding(2);
             this.tbStartCredits.Multiline = true;
             this.tbStartCredits.Name = "tbStartCredits";
             this.tbStartCredits.Size = new System.Drawing.Size(722, 53);
@@ -3191,7 +3237,7 @@
             // 
             this.cbWriteStartingText.AutoSize = true;
             this.cbWriteStartingText.Location = new System.Drawing.Point(4, 17);
-            this.cbWriteStartingText.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbWriteStartingText.Margin = new System.Windows.Forms.Padding(2);
             this.cbWriteStartingText.Name = "cbWriteStartingText";
             this.cbWriteStartingText.Size = new System.Drawing.Size(279, 17);
             this.cbWriteStartingText.TabIndex = 0;
@@ -3219,9 +3265,9 @@
             this.tabPageDebug.Controls.Add(this.tbElementaryStreamFilename);
             this.tabPageDebug.Controls.Add(this.cbDebugWriteES);
             this.tabPageDebug.Location = new System.Drawing.Point(4, 22);
-            this.tabPageDebug.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageDebug.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageDebug.Name = "tabPageDebug";
-            this.tabPageDebug.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageDebug.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageDebug.Size = new System.Drawing.Size(746, 462);
             this.tabPageDebug.TabIndex = 4;
             this.tabPageDebug.Text = "Debug";
@@ -3231,7 +3277,7 @@
             // 
             this.cbDebugLevDistance.AutoSize = true;
             this.cbDebugLevDistance.Location = new System.Drawing.Point(6, 311);
-            this.cbDebugLevDistance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDebugLevDistance.Margin = new System.Windows.Forms.Padding(2);
             this.cbDebugLevDistance.Name = "cbDebugLevDistance";
             this.cbDebugLevDistance.Size = new System.Drawing.Size(336, 17);
             this.cbDebugLevDistance.TabIndex = 16;
@@ -3243,7 +3289,7 @@
             // 
             this.cbDebugAnalyzePackets.AutoSize = true;
             this.cbDebugAnalyzePackets.Location = new System.Drawing.Point(6, 289);
-            this.cbDebugAnalyzePackets.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDebugAnalyzePackets.Margin = new System.Windows.Forms.Padding(2);
             this.cbDebugAnalyzePackets.Name = "cbDebugAnalyzePackets";
             this.cbDebugAnalyzePackets.Size = new System.Drawing.Size(441, 17);
             this.cbDebugAnalyzePackets.TabIndex = 15;
@@ -3256,7 +3302,7 @@
             // 
             this.cbDebugPMT.AutoSize = true;
             this.cbDebugPMT.Location = new System.Drawing.Point(6, 267);
-            this.cbDebugPMT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDebugPMT.Margin = new System.Windows.Forms.Padding(2);
             this.cbDebugPMT.Name = "cbDebugPMT";
             this.cbDebugPMT.Size = new System.Drawing.Size(198, 17);
             this.cbDebugPMT.TabIndex = 14;
@@ -3268,7 +3314,7 @@
             // 
             this.cbDebugPAT.AutoSize = true;
             this.cbDebugPAT.Location = new System.Drawing.Point(6, 245);
-            this.cbDebugPAT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDebugPAT.Margin = new System.Windows.Forms.Padding(2);
             this.cbDebugPAT.Name = "cbDebugPAT";
             this.cbDebugPAT.Size = new System.Drawing.Size(231, 17);
             this.cbDebugPAT.TabIndex = 13;
@@ -3280,7 +3326,7 @@
             // 
             this.cbDebugXDS.AutoSize = true;
             this.cbDebugXDS.Location = new System.Drawing.Point(6, 223);
-            this.cbDebugXDS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDebugXDS.Margin = new System.Windows.Forms.Padding(2);
             this.cbDebugXDS.Name = "cbDebugXDS";
             this.cbDebugXDS.Size = new System.Drawing.Size(149, 17);
             this.cbDebugXDS.TabIndex = 12;
@@ -3292,7 +3338,7 @@
             // 
             this.cbFullbin.AutoSize = true;
             this.cbFullbin.Location = new System.Drawing.Point(6, 202);
-            this.cbFullbin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbFullbin.Margin = new System.Windows.Forms.Padding(2);
             this.cbFullbin.Name = "cbFullbin";
             this.cbFullbin.Size = new System.Drawing.Size(245, 17);
             this.cbFullbin.TabIndex = 11;
@@ -3304,7 +3350,7 @@
             // 
             this.cbNosync.AutoSize = true;
             this.cbNosync.Location = new System.Drawing.Point(6, 180);
-            this.cbNosync.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbNosync.Margin = new System.Windows.Forms.Padding(2);
             this.cbNosync.Name = "cbNosync";
             this.cbNosync.Size = new System.Drawing.Size(292, 17);
             this.cbNosync.TabIndex = 10;
@@ -3316,7 +3362,7 @@
             // 
             this.cbDebugContainer.AutoSize = true;
             this.cbDebugContainer.Location = new System.Drawing.Point(4, 158);
-            this.cbDebugContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDebugContainer.Margin = new System.Windows.Forms.Padding(2);
             this.cbDebugContainer.Name = "cbDebugContainer";
             this.cbDebugContainer.Size = new System.Drawing.Size(411, 17);
             this.cbDebugContainer.TabIndex = 9;
@@ -3329,7 +3375,7 @@
             // 
             this.cbDebugRaw608_708wTimestamps.AutoSize = true;
             this.cbDebugRaw608_708wTimestamps.Location = new System.Drawing.Point(4, 136);
-            this.cbDebugRaw608_708wTimestamps.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDebugRaw608_708wTimestamps.Margin = new System.Windows.Forms.Padding(2);
             this.cbDebugRaw608_708wTimestamps.Name = "cbDebugRaw608_708wTimestamps";
             this.cbDebugRaw608_708wTimestamps.Size = new System.Drawing.Size(318, 17);
             this.cbDebugRaw608_708wTimestamps.TabIndex = 8;
@@ -3341,7 +3387,7 @@
             // 
             this.cbDebugESAnalysis.AutoSize = true;
             this.cbDebugESAnalysis.Location = new System.Drawing.Point(4, 115);
-            this.cbDebugESAnalysis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDebugESAnalysis.Margin = new System.Windows.Forms.Padding(2);
             this.cbDebugESAnalysis.Name = "cbDebugESAnalysis";
             this.cbDebugESAnalysis.Size = new System.Drawing.Size(313, 17);
             this.cbDebugESAnalysis.TabIndex = 7;
@@ -3353,7 +3399,7 @@
             // 
             this.cbDebugTimestamps.AutoSize = true;
             this.cbDebugTimestamps.Location = new System.Drawing.Point(4, 93);
-            this.cbDebugTimestamps.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDebugTimestamps.Margin = new System.Windows.Forms.Padding(2);
             this.cbDebugTimestamps.Name = "cbDebugTimestamps";
             this.cbDebugTimestamps.Size = new System.Drawing.Size(179, 17);
             this.cbDebugTimestamps.TabIndex = 6;
@@ -3365,7 +3411,7 @@
             // 
             this.cbDebugTraces708.AutoSize = true;
             this.cbDebugTraces708.Location = new System.Drawing.Point(4, 71);
-            this.cbDebugTraces708.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDebugTraces708.Margin = new System.Windows.Forms.Padding(2);
             this.cbDebugTraces708.Name = "cbDebugTraces708";
             this.cbDebugTraces708.Size = new System.Drawing.Size(239, 17);
             this.cbDebugTraces708.TabIndex = 5;
@@ -3377,7 +3423,7 @@
             // 
             this.cbDebugTraces608.AutoSize = true;
             this.cbDebugTraces608.Location = new System.Drawing.Point(4, 49);
-            this.cbDebugTraces608.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDebugTraces608.Margin = new System.Windows.Forms.Padding(2);
             this.cbDebugTraces608.Name = "cbDebugTraces608";
             this.cbDebugTraces608.Size = new System.Drawing.Size(239, 17);
             this.cbDebugTraces608.TabIndex = 4;
@@ -3389,7 +3435,7 @@
             // 
             this.cbDebugInterestingPackets.AutoSize = true;
             this.cbDebugInterestingPackets.Location = new System.Drawing.Point(4, 27);
-            this.cbDebugInterestingPackets.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDebugInterestingPackets.Margin = new System.Windows.Forms.Padding(2);
             this.cbDebugInterestingPackets.Name = "cbDebugInterestingPackets";
             this.cbDebugInterestingPackets.Size = new System.Drawing.Size(367, 17);
             this.cbDebugInterestingPackets.TabIndex = 3;
@@ -3400,7 +3446,7 @@
             // btnBrowseElementaryStreamFilename
             // 
             this.btnBrowseElementaryStreamFilename.Location = new System.Drawing.Point(418, 5);
-            this.btnBrowseElementaryStreamFilename.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBrowseElementaryStreamFilename.Margin = new System.Windows.Forms.Padding(2);
             this.btnBrowseElementaryStreamFilename.Name = "btnBrowseElementaryStreamFilename";
             this.btnBrowseElementaryStreamFilename.Size = new System.Drawing.Size(56, 21);
             this.btnBrowseElementaryStreamFilename.TabIndex = 2;
@@ -3411,7 +3457,7 @@
             // tbElementaryStreamFilename
             // 
             this.tbElementaryStreamFilename.Location = new System.Drawing.Point(195, 5);
-            this.tbElementaryStreamFilename.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbElementaryStreamFilename.Margin = new System.Windows.Forms.Padding(2);
             this.tbElementaryStreamFilename.Name = "tbElementaryStreamFilename";
             this.tbElementaryStreamFilename.Size = new System.Drawing.Size(212, 20);
             this.tbElementaryStreamFilename.TabIndex = 1;
@@ -3421,7 +3467,7 @@
             // 
             this.cbDebugWriteES.AutoSize = true;
             this.cbDebugWriteES.Location = new System.Drawing.Point(4, 5);
-            this.cbDebugWriteES.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDebugWriteES.Margin = new System.Windows.Forms.Padding(2);
             this.cbDebugWriteES.Name = "cbDebugWriteES";
             this.cbDebugWriteES.Size = new System.Drawing.Size(186, 17);
             this.cbDebugWriteES.TabIndex = 0;
@@ -3438,7 +3484,7 @@
             this.tabPageHDHomeRun.Controls.Add(this.tbHDHomeRunPath);
             this.tabPageHDHomeRun.Controls.Add(this.label53);
             this.tabPageHDHomeRun.Location = new System.Drawing.Point(4, 22);
-            this.tabPageHDHomeRun.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageHDHomeRun.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageHDHomeRun.Name = "tabPageHDHomeRun";
             this.tabPageHDHomeRun.Size = new System.Drawing.Size(746, 462);
             this.tabPageHDHomeRun.TabIndex = 10;
@@ -3448,7 +3494,7 @@
             // butFindTuners
             // 
             this.butFindTuners.Location = new System.Drawing.Point(45, 35);
-            this.butFindTuners.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butFindTuners.Margin = new System.Windows.Forms.Padding(2);
             this.butFindTuners.Name = "butFindTuners";
             this.butFindTuners.Size = new System.Drawing.Size(148, 19);
             this.butFindTuners.TabIndex = 5;
@@ -3462,7 +3508,7 @@
             this.listBoxTuners.Items.AddRange(new object[] {
             "No devices found yet."});
             this.listBoxTuners.Location = new System.Drawing.Point(8, 58);
-            this.listBoxTuners.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxTuners.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxTuners.Name = "listBoxTuners";
             this.listBoxTuners.Size = new System.Drawing.Size(186, 69);
             this.listBoxTuners.TabIndex = 4;
@@ -3480,7 +3526,7 @@
             // butHDHomeRunDir
             // 
             this.butHDHomeRunDir.Location = new System.Drawing.Point(641, 10);
-            this.butHDHomeRunDir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butHDHomeRunDir.Margin = new System.Windows.Forms.Padding(2);
             this.butHDHomeRunDir.Name = "butHDHomeRunDir";
             this.butHDHomeRunDir.Size = new System.Drawing.Size(72, 19);
             this.butHDHomeRunDir.TabIndex = 2;
@@ -3491,7 +3537,7 @@
             // tbHDHomeRunPath
             // 
             this.tbHDHomeRunPath.Location = new System.Drawing.Point(304, 11);
-            this.tbHDHomeRunPath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbHDHomeRunPath.Margin = new System.Windows.Forms.Padding(2);
             this.tbHDHomeRunPath.Name = "tbHDHomeRunPath";
             this.tbHDHomeRunPath.Size = new System.Drawing.Size(323, 20);
             this.tbHDHomeRunPath.TabIndex = 1;
@@ -3539,9 +3585,9 @@
             this.groupBox5.Controls.Add(this.labelConfThresh);
             this.groupBox5.Controls.Add(this.tbConfThresh);
             this.groupBox5.Location = new System.Drawing.Point(383, 121);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(220, 78);
             this.groupBox5.TabIndex = 16;
             this.groupBox5.TabStop = false;
@@ -3573,9 +3619,9 @@
             this.groupBox4.Controls.Add(this.labelWhitenessThresh);
             this.groupBox4.Controls.Add(this.tbWhitenessThresh);
             this.groupBox4.Location = new System.Drawing.Point(147, 121);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(220, 78);
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
@@ -3610,9 +3656,9 @@
             this.groupBox3.Controls.Add(this.tbMinSubDuration);
             this.groupBox3.Controls.Add(this.label56);
             this.groupBox3.Location = new System.Drawing.Point(313, 26);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(290, 91);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
@@ -3670,9 +3716,9 @@
             this.groupBox2.Controls.Add(this.rbOcrModeWord);
             this.groupBox2.Controls.Add(this.rbOcrModeFrame);
             this.groupBox2.Location = new System.Drawing.Point(147, 26);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(149, 91);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
@@ -3738,9 +3784,9 @@
             this.groupBoxBurnedinColor.Controls.Add(this.rbBurnedinYellow);
             this.groupBoxBurnedinColor.Controls.Add(this.rbBurnedinWhite);
             this.groupBoxBurnedinColor.Location = new System.Drawing.Point(4, 26);
-            this.groupBoxBurnedinColor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxBurnedinColor.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxBurnedinColor.Name = "groupBoxBurnedinColor";
-            this.groupBoxBurnedinColor.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxBurnedinColor.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxBurnedinColor.Size = new System.Drawing.Size(130, 263);
             this.groupBoxBurnedinColor.TabIndex = 1;
             this.groupBoxBurnedinColor.TabStop = false;
@@ -3886,9 +3932,9 @@
             this.tabPageExecution.Controls.Add(this.btnGo);
             this.tabPageExecution.Controls.Add(this.LabReportsProgress);
             this.tabPageExecution.Location = new System.Drawing.Point(4, 22);
-            this.tabPageExecution.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageExecution.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageExecution.Name = "tabPageExecution";
-            this.tabPageExecution.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageExecution.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageExecution.Size = new System.Drawing.Size(746, 462);
             this.tabPageExecution.TabIndex = 6;
             this.tabPageExecution.Text = "Execution";
@@ -3898,7 +3944,7 @@
             // 
             this.progressBarActivity.ForeColor = System.Drawing.Color.Lime;
             this.progressBarActivity.Location = new System.Drawing.Point(712, 446);
-            this.progressBarActivity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.progressBarActivity.Margin = new System.Windows.Forms.Padding(2);
             this.progressBarActivity.MarqueeAnimationSpeed = 0;
             this.progressBarActivity.Maximum = 3;
             this.progressBarActivity.Name = "progressBarActivity";
@@ -3983,7 +4029,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(400, 214);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -4114,7 +4160,7 @@
             // progressBarCCE
             // 
             this.progressBarCCE.Location = new System.Drawing.Point(196, 427);
-            this.progressBarCCE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.progressBarCCE.Margin = new System.Windows.Forms.Padding(2);
             this.progressBarCCE.Name = "progressBarCCE";
             this.progressBarCCE.Size = new System.Drawing.Size(315, 15);
             this.progressBarCCE.TabIndex = 11;
@@ -4185,7 +4231,7 @@
             this.textBoxActivity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxActivity.Font = new System.Drawing.Font("Courier New", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxActivity.Location = new System.Drawing.Point(4, 19);
-            this.textBoxActivity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxActivity.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxActivity.Multiline = true;
             this.textBoxActivity.Name = "textBoxActivity";
             this.textBoxActivity.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -4195,7 +4241,7 @@
             // btnGo
             // 
             this.btnGo.Location = new System.Drawing.Point(686, 418);
-            this.btnGo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGo.Margin = new System.Windows.Forms.Padding(2);
             this.btnGo.Name = "btnGo";
             this.btnGo.Size = new System.Drawing.Size(56, 24);
             this.btnGo.TabIndex = 0;
@@ -4217,7 +4263,7 @@
             this.textBoxCommandLine.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxCommandLine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxCommandLine.Location = new System.Drawing.Point(3, 515);
-            this.textBoxCommandLine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCommandLine.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCommandLine.Multiline = true;
             this.textBoxCommandLine.Name = "textBoxCommandLine";
             this.textBoxCommandLine.ReadOnly = true;
@@ -4239,6 +4285,18 @@
             this.folderBrowserDialogHDHomeRun.SelectedPath = "C:\\Program Files\\Silicondust\\HDHomeRun";
             this.folderBrowserDialogHDHomeRun.ShowNewFolderButton = false;
             // 
+            // rbInputTypeMXF
+            // 
+            this.rbInputTypeMXF.AutoSize = true;
+            this.rbInputTypeMXF.Location = new System.Drawing.Point(547, 17);
+            this.rbInputTypeMXF.Name = "rbInputTypeMXF";
+            this.rbInputTypeMXF.Size = new System.Drawing.Size(179, 17);
+            this.rbInputTypeMXF.TabIndex = 4;
+            this.rbInputTypeMXF.TabStop = true;
+            this.rbInputTypeMXF.Text = "MXF (Material Exchange Format)";
+            this.rbInputTypeMXF.UseVisualStyleBackColor = true;
+            this.rbInputTypeMXF.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4250,11 +4308,11 @@
             this.Controls.Add(this.tabControlMain);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(808, 695);
             this.MinimumSize = new System.Drawing.Size(767, 558);
             this.Name = "FormMain";
-            this.Text = "CCExtractor GUI 0.85";
+            this.Text = "CCExtractor GUI 0.87";
             this.Load += new System.EventHandler(this.FormMain_Load);
             tabPageDecoders.ResumeLayout(false);
             tabPageDecoders.PerformLayout();
@@ -4684,6 +4742,10 @@
         private System.Windows.Forms.Label labelConfThresh;
         private System.Windows.Forms.TrackBar tbConfThresh;
         private System.Windows.Forms.CheckBox cbcheckVideo;
+        private System.Windows.Forms.RadioButton rbInputTypeMKV;
+        private System.Windows.Forms.RadioButton rbOutputTypeWebVTTFull;
+        private System.Windows.Forms.RadioButton rbOutputTypeWebVTT;
+        private System.Windows.Forms.RadioButton rbInputTypeMXF;
     }
 }
 

@@ -356,6 +356,10 @@ namespace CCExtractorGUI
                 switches = switches + " -out=g608";
             if (rbOutputTypeASS.Checked)
                 switches = switches + " -out=ass";
+            if (rbOutputTypeWebVTT.Checked)
+                switches = switches + " -out=webvtt";
+            if (rbOutputTypeWebVTTFull.Checked)
+                switches = switches + " -out=webvtt-full";
 
             if (rbRollUpLinesLimit3.Checked)
                 switches = switches + " -ru3";

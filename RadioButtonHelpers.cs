@@ -20,10 +20,18 @@ namespace CCExtractorGUI
                     return rbInputTypeElementaryStreams;
                 case "asf":
                     return rbInputTypeDVRMS;
+                case "wtv":
+                    return rbInputTypeWTV;
+                case "bin":
+                    return rbInputTypeBin;
                 case "raw":
                     return rbInputTypeMcPoodleRaw;
-                case "bin":
-                    return rbInputTypeBin;    
+                case "m2ts":
+                    return rbInputTypeM2TS;
+                case "mkv":
+                    return rbInputTypeMKV;
+                case "mxf":
+                    return rbInputTypeMXF;
                 default:
                     return rbInputTypeAutodetect;
             }
@@ -39,16 +47,20 @@ namespace CCExtractorGUI
                 return "es";
             if (rbInputTypeDVRMS.Checked)
                 return "asf";
-            if (rbInputTypeMcPoodleRaw.Checked)
-                return "raw";
-            if (rbInputTypeBin.Checked)
-                return "bin";
-            if (rbInputTypeMP4.Checked)
-                return "mp4";
             if (rbInputTypeWTV.Checked)
                 return "wtv";
+            if (rbInputTypeBin.Checked)
+                return "bin";
+            if (rbInputTypeMcPoodleRaw.Checked)
+                return "raw";
+            if (rbInputTypeMP4.Checked)
+                return "mp4";
             if (rbInputTypeM2TS.Checked)
                 return "m2ts";
+            if (rbInputTypeMKV.Checked)
+                return "mkv";
+            if (rbInputTypeMXF.Checked)
+                return "mxf";
             return "auto";
         }
         #endregion
