@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.TabPage tabPageDecoders;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            this.cbDisableLevDistance = new System.Windows.Forms.CheckBox();
             this.txtlevdistmaxpct = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.txtlevdistmincnt = new System.Windows.Forms.TextBox();
@@ -123,6 +124,7 @@
             this.rbSplitVideoTool = new System.Windows.Forms.RadioButton();
             this.rbSplitIndividual = new System.Windows.Forms.RadioButton();
             this.groupBoxInputType = new System.Windows.Forms.GroupBox();
+            this.rbInputTypeMXF = new System.Windows.Forms.RadioButton();
             this.rbInputTypeMKV = new System.Windows.Forms.RadioButton();
             this.rbInputTypeM2TS = new System.Windows.Forms.RadioButton();
             this.rbInputTypeWTV = new System.Windows.Forms.RadioButton();
@@ -343,7 +345,6 @@
             this.textBoxCommandLine = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.folderBrowserDialogHDHomeRun = new System.Windows.Forms.FolderBrowserDialog();
-            this.rbInputTypeMXF = new System.Windows.Forms.RadioButton();
             tabPageDecoders = new System.Windows.Forms.TabPage();
             tabPageDecoders.SuspendLayout();
             this.groupBoxTelext.SuspendLayout();
@@ -418,6 +419,7 @@
             // 
             // tabPageDecoders
             // 
+            tabPageDecoders.Controls.Add(this.cbDisableLevDistance);
             tabPageDecoders.Controls.Add(this.txtlevdistmaxpct);
             tabPageDecoders.Controls.Add(this.label52);
             tabPageDecoders.Controls.Add(this.txtlevdistmincnt);
@@ -444,9 +446,20 @@
             tabPageDecoders.Text = "Decoders";
             tabPageDecoders.UseVisualStyleBackColor = true;
             // 
+            // cbDisableLevDistance
+            // 
+            this.cbDisableLevDistance.AutoSize = true;
+            this.cbDisableLevDistance.Location = new System.Drawing.Point(4, 422);
+            this.cbDisableLevDistance.Name = "cbDisableLevDistance";
+            this.cbDisableLevDistance.Size = new System.Drawing.Size(212, 17);
+            this.cbDisableLevDistance.TabIndex = 25;
+            this.cbDisableLevDistance.Text = "Disable Levenshtein distance heuristics";
+            this.cbDisableLevDistance.UseVisualStyleBackColor = true;
+            this.cbDisableLevDistance.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
             // txtlevdistmaxpct
             // 
-            this.txtlevdistmaxpct.Location = new System.Drawing.Point(560, 422);
+            this.txtlevdistmaxpct.Location = new System.Drawing.Point(560, 437);
             this.txtlevdistmaxpct.Margin = new System.Windows.Forms.Padding(2);
             this.txtlevdistmaxpct.Name = "txtlevdistmaxpct";
             this.txtlevdistmaxpct.Size = new System.Drawing.Size(76, 20);
@@ -456,7 +469,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(285, 427);
+            this.label52.Location = new System.Drawing.Point(285, 442);
             this.label52.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(270, 13);
@@ -465,7 +478,7 @@
             // 
             // txtlevdistmincnt
             // 
-            this.txtlevdistmincnt.Location = new System.Drawing.Point(187, 424);
+            this.txtlevdistmincnt.Location = new System.Drawing.Point(187, 439);
             this.txtlevdistmincnt.Margin = new System.Windows.Forms.Padding(2);
             this.txtlevdistmincnt.Name = "txtlevdistmincnt";
             this.txtlevdistmincnt.Size = new System.Drawing.Size(76, 20);
@@ -475,7 +488,7 @@
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(2, 427);
+            this.label51.Location = new System.Drawing.Point(2, 442);
             this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(180, 13);
@@ -484,7 +497,7 @@
             // 
             // label50
             // 
-            this.label50.Location = new System.Drawing.Point(2, 396);
+            this.label50.Location = new System.Drawing.Point(2, 391);
             this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(740, 31);
@@ -497,7 +510,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.BackColor = System.Drawing.Color.MediumTurquoise;
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(-1, 375);
+            this.label21.Location = new System.Drawing.Point(-1, 370);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(751, 17);
@@ -515,7 +528,7 @@
             this.groupBoxTelext.Controls.Add(this.rbTeletextDisable);
             this.groupBoxTelext.Controls.Add(this.label47);
             this.groupBoxTelext.Controls.Add(this.rbTeletextAuto);
-            this.groupBoxTelext.Location = new System.Drawing.Point(2, 272);
+            this.groupBoxTelext.Location = new System.Drawing.Point(2, 268);
             this.groupBoxTelext.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxTelext.Name = "groupBoxTelext";
             this.groupBoxTelext.Padding = new System.Windows.Forms.Padding(2);
@@ -672,7 +685,7 @@
             // 
             // label41
             // 
-            this.label41.Location = new System.Drawing.Point(2, 121);
+            this.label41.Location = new System.Drawing.Point(1, 134);
             this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(744, 36);
@@ -685,7 +698,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label40.BackColor = System.Drawing.Color.MediumTurquoise;
             this.label40.ForeColor = System.Drawing.Color.Black;
-            this.label40.Location = new System.Drawing.Point(-2, 95);
+            this.label40.Location = new System.Drawing.Point(-1, 113);
             this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(751, 17);
@@ -695,7 +708,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(355, 20);
+            this.label6.Location = new System.Drawing.Point(355, 32);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(394, 73);
@@ -707,7 +720,7 @@
             this.groupBoxChannel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBoxChannel.Controls.Add(this.rbChannel2);
             this.groupBoxChannel.Controls.Add(this.rbChannel1);
-            this.groupBoxChannel.Location = new System.Drawing.Point(165, 18);
+            this.groupBoxChannel.Location = new System.Drawing.Point(165, 30);
             this.groupBoxChannel.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxChannel.Name = "groupBoxChannel";
             this.groupBoxChannel.Padding = new System.Windows.Forms.Padding(2);
@@ -747,7 +760,7 @@
             this.groupBoxField.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBoxField.Controls.Add(this.cbField2);
             this.groupBoxField.Controls.Add(this.cbField1);
-            this.groupBoxField.Location = new System.Drawing.Point(0, 18);
+            this.groupBoxField.Location = new System.Drawing.Point(0, 30);
             this.groupBoxField.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxField.Name = "groupBoxField";
             this.groupBoxField.Padding = new System.Windows.Forms.Padding(2);
@@ -788,7 +801,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label39.BackColor = System.Drawing.Color.MediumTurquoise;
             this.label39.ForeColor = System.Drawing.Color.Black;
-            this.label39.Location = new System.Drawing.Point(-2, 0);
+            this.label39.Location = new System.Drawing.Point(-2, 8);
             this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(751, 17);
@@ -1610,6 +1623,18 @@
             this.groupBoxInputType.TabIndex = 0;
             this.groupBoxInputType.TabStop = false;
             this.groupBoxInputType.Text = "Input type";
+            // 
+            // rbInputTypeMXF
+            // 
+            this.rbInputTypeMXF.AutoSize = true;
+            this.rbInputTypeMXF.Location = new System.Drawing.Point(547, 17);
+            this.rbInputTypeMXF.Name = "rbInputTypeMXF";
+            this.rbInputTypeMXF.Size = new System.Drawing.Size(179, 17);
+            this.rbInputTypeMXF.TabIndex = 4;
+            this.rbInputTypeMXF.TabStop = true;
+            this.rbInputTypeMXF.Text = "MXF (Material Exchange Format)";
+            this.rbInputTypeMXF.UseVisualStyleBackColor = true;
+            this.rbInputTypeMXF.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
             // 
             // rbInputTypeMKV
             // 
@@ -4285,18 +4310,6 @@
             this.folderBrowserDialogHDHomeRun.SelectedPath = "C:\\Program Files\\Silicondust\\HDHomeRun";
             this.folderBrowserDialogHDHomeRun.ShowNewFolderButton = false;
             // 
-            // rbInputTypeMXF
-            // 
-            this.rbInputTypeMXF.AutoSize = true;
-            this.rbInputTypeMXF.Location = new System.Drawing.Point(547, 17);
-            this.rbInputTypeMXF.Name = "rbInputTypeMXF";
-            this.rbInputTypeMXF.Size = new System.Drawing.Size(179, 17);
-            this.rbInputTypeMXF.TabIndex = 4;
-            this.rbInputTypeMXF.TabStop = true;
-            this.rbInputTypeMXF.Text = "MXF (Material Exchange Format)";
-            this.rbInputTypeMXF.UseVisualStyleBackColor = true;
-            this.rbInputTypeMXF.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4746,6 +4759,7 @@
         private System.Windows.Forms.RadioButton rbOutputTypeWebVTTFull;
         private System.Windows.Forms.RadioButton rbOutputTypeWebVTT;
         private System.Windows.Forms.RadioButton rbInputTypeMXF;
+        private System.Windows.Forms.CheckBox cbDisableLevDistance;
     }
 }
 

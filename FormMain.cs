@@ -113,6 +113,9 @@ namespace CCExtractorGUI
             setRollUpLinesLimitRatio(Properties.Settings.Default.RollUpLinesLimit);
             rbBOMYes.Checked = Properties.Settings.Default.BOMinUTF;
             cbExportXDS.Checked = Properties.Settings.Default.ExportXDS;
+            cbDisableLevDistance.Checked = Properties.Settings.Default.DisableLevDistance;
+            txtlevdistmincnt.Text = Properties.Settings.Default.LevDistanceMin;
+            txtlevdistmaxpct.Text = Properties.Settings.Default.LevDistanceMax;
         }
         
         private void btnSaveAsDefault_Click(object sender, EventArgs e)
@@ -175,6 +178,9 @@ namespace CCExtractorGUI
             Properties.Settings.Default.HDHomeRunToolsPath = tbHDHomeRunPath.Text;
             Properties.Settings.Default.BOMinUTF = rbBOMYes.Checked;
             Properties.Settings.Default.ExportXDS = cbExportXDS.Checked;
+            Properties.Settings.Default.DisableLevDistance = cbDisableLevDistance.Checked;
+            Properties.Settings.Default.LevDistanceMin = txtlevdistmincnt.Text ;
+            Properties.Settings.Default.LevDistanceMax = txtlevdistmaxpct.Text ;
             Properties.Settings.Default.Save();
         }
 
@@ -478,10 +484,15 @@ namespace CCExtractorGUI
                 switches = switches + " -tpage " + txtTeletextPage.Text;
             if (rbPreferDVB.Checked)
                 switches = switches + " -codec dvbsub";
-            if (txtlevdistmincnt.Text.Trim() != "")
-                switches = switches + " -levdistmincnt " + txtlevdistmincnt.Text;
-            if (txtlevdistmaxpct.Text.Trim() != "")
-                switches = switches + " -levdistmaxpct " + txtlevdistmaxpct.Text;
+            if (cbDisableLevDistance.Checked)
+                switches = switches + " -nolevdist";
+            else
+            { 
+                if (txtlevdistmincnt.Text.Trim() != "")
+                    switches = switches + " -levdistmincnt " + txtlevdistmincnt.Text;
+                if (txtlevdistmaxpct.Text.Trim() != "")
+                    switches = switches + " -levdistmaxpct " + txtlevdistmaxpct.Text;
+            }
             return switches;
 
         }
