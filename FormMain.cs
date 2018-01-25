@@ -116,6 +116,9 @@ namespace CCExtractorGUI
             cbDisableLevDistance.Checked = Properties.Settings.Default.DisableLevDistance;
             txtlevdistmincnt.Text = Properties.Settings.Default.LevDistanceMin;
             txtlevdistmaxpct.Text = Properties.Settings.Default.LevDistanceMax;
+            cb_fixptsjumps.Checked = Properties.Settings.Default.FixPTSJumps;
+            txtFontSpupng.Text = Properties.Settings.Default.FontPathSpupng;
+            cbspupng_noocr.Checked = Properties.Settings.Default.nospupngocr;
         }
         
         private void btnSaveAsDefault_Click(object sender, EventArgs e)
@@ -181,6 +184,9 @@ namespace CCExtractorGUI
             Properties.Settings.Default.DisableLevDistance = cbDisableLevDistance.Checked;
             Properties.Settings.Default.LevDistanceMin = txtlevdistmincnt.Text ;
             Properties.Settings.Default.LevDistanceMax = txtlevdistmaxpct.Text ;
+            Properties.Settings.Default.FixPTSJumps = cb_fixptsjumps.Checked;
+            Properties.Settings.Default.FontPathSpupng = txtFontSpupng.Text ;
+            Properties.Settings.Default.nospupngocr= cbspupng_noocr.Checked;
             Properties.Settings.Default.Save();
         }
 
@@ -264,7 +270,13 @@ namespace CCExtractorGUI
             if (rbScreenfulsStopAfter.Checked && updownScreenfuls.Value!=0)
                 switches=switches+" --screenfuls "+updownScreenfuls.Value;
             return switches;
-        }        
+
+            if (tbProgramNumber.Text != "")
+                switches = switches + " --program-number " + tbProgramNumber.Text;
+            if (rbMultiProgramTSAutoDetect.Checked)
+                switches = switches + " -autoprogram " + tbProgramNumber.Text;
+
+        }
 
         private string getSwitchesFromAdvancedInputOptionsTab ()
         {
@@ -291,12 +303,10 @@ namespace CCExtractorGUI
                 switches = switches + " --goptime";
             if (rbClockPTS.Checked)
                 switches = switches + " --nogoptime";
-            if (tbProgramNumber.Text!="")
-                switches = switches + " --program-number " + tbProgramNumber.Text;
-            if (rbMultiProgramTSAutoDetect.Checked)
-                switches = switches + " -autoprogram " + tbProgramNumber.Text;
             if (cb_ignore_scte20.Checked)
                 switches = switches + " --noscte20";
+            if (cb_fixptsjumps.Checked)
+                switches = switches + " -fixptsjumps";
             return switches;
         }
 
@@ -391,6 +401,14 @@ namespace CCExtractorGUI
             if (cbExportXDS.Checked)
                 switches = switches + " -xds";
 
+            // Font (spupng)
+            if (txtFontSpupng.Text != "")
+                switches = switches + " -font \"" + txtFontSpupng.Text + "\"";
+            if (cbspupng_noocr.Checked)
+                switches = switches + " -nospupngocr";
+
+
+
 
             return switches; 
 
@@ -430,6 +448,10 @@ namespace CCExtractorGUI
                 switches = switches + " -investigate_packets";
             if (cbDebugLevDistance.Checked)
                 switches = switches + " -deblev";
+            if (cbDebugPESHeader.Checked)
+                switches = switches + " -pesheader";
+            if (cbDebugDVB.Checked)
+                switches = switches + " -debugdvbsub";
 
             return switches;
         }
@@ -1212,5 +1234,13 @@ namespace CCExtractorGUI
             }
         }
 
+        private void butSelectFontSpupng_Click(object sender, EventArgs e)
+        {
+            if (openFileDialogFontSpupng.ShowDialog() == DialogResult.OK)
+                txtFontSpupng.Text = openFileDialogFontSpupng.FileName;
+            else
+                txtFontSpupng.Text = "";
+            prepareCommandLine();
+        }
     }        
 }

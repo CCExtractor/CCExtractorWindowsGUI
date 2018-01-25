@@ -87,6 +87,10 @@
             this.butClearInputList = new System.Windows.Forms.Button();
             this.listViewInputFiles = new System.Windows.Forms.ListView();
             this.tabPageInputOptions = new System.Windows.Forms.TabPage();
+            this.groupBoxMultiprogramTS = new System.Windows.Forms.GroupBox();
+            this.rbMultiProgramTSAutoDetect = new System.Windows.Forms.RadioButton();
+            this.rbMultiProgramTSSelect = new System.Windows.Forms.RadioButton();
+            this.tbProgramNumber = new System.Windows.Forms.TextBox();
             this.groupBoxElementaryStream = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbElementaryStreamType = new System.Windows.Forms.TextBox();
@@ -143,11 +147,8 @@
             this.rbClockPTS = new System.Windows.Forms.RadioButton();
             this.rbClockGOP = new System.Windows.Forms.RadioButton();
             this.rbClockAuto = new System.Windows.Forms.RadioButton();
-            this.groupBoxMultiprogramTS = new System.Windows.Forms.GroupBox();
-            this.rbMultiProgramTSAutoDetect = new System.Windows.Forms.RadioButton();
-            this.rbMultiProgramTSSelect = new System.Windows.Forms.RadioButton();
-            this.tbProgramNumber = new System.Windows.Forms.TextBox();
             this.groupBoxAdvancedInputMisc = new System.Windows.Forms.GroupBox();
+            this.cb_fixptsjumps = new System.Windows.Forms.CheckBox();
             this.cb_ignore_scte20 = new System.Windows.Forms.CheckBox();
             this.cb_mp4vidtrack = new System.Windows.Forms.CheckBox();
             this.cb_use_pic_order_cnt = new System.Windows.Forms.CheckBox();
@@ -227,6 +228,11 @@
             this.rbEncodingUnicode = new System.Windows.Forms.RadioButton();
             this.rbEncodingUTF8 = new System.Windows.Forms.RadioButton();
             this.rbEncodingLatin1 = new System.Windows.Forms.RadioButton();
+            this.tabPageOutput3 = new System.Windows.Forms.TabPage();
+            this.groupBoxspupng = new System.Windows.Forms.GroupBox();
+            this.butSelectFontSpupng = new System.Windows.Forms.Button();
+            this.txtFontSpupng = new System.Windows.Forms.TextBox();
+            this.label60 = new System.Windows.Forms.Label();
             this.tabPageCredits = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label34 = new System.Windows.Forms.Label();
@@ -253,6 +259,8 @@
             this.tbStartCredits = new System.Windows.Forms.TextBox();
             this.cbWriteStartingText = new System.Windows.Forms.CheckBox();
             this.tabPageDebug = new System.Windows.Forms.TabPage();
+            this.cbDebugDVB = new System.Windows.Forms.CheckBox();
+            this.cbDebugPESHeader = new System.Windows.Forms.CheckBox();
             this.cbDebugLevDistance = new System.Windows.Forms.CheckBox();
             this.cbDebugAnalyzePackets = new System.Windows.Forms.CheckBox();
             this.cbDebugPMT = new System.Windows.Forms.CheckBox();
@@ -345,6 +353,8 @@
             this.textBoxCommandLine = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.folderBrowserDialogHDHomeRun = new System.Windows.Forms.FolderBrowserDialog();
+            this.openFileDialogFontSpupng = new System.Windows.Forms.OpenFileDialog();
+            this.cbspupng_noocr = new System.Windows.Forms.CheckBox();
             tabPageDecoders = new System.Windows.Forms.TabPage();
             tabPageDecoders.SuspendLayout();
             this.groupBoxTelext.SuspendLayout();
@@ -357,6 +367,7 @@
             this.tabPageInput.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPageInputOptions.SuspendLayout();
+            this.groupBoxMultiprogramTS.SuspendLayout();
             this.groupBoxElementaryStream.SuspendLayout();
             this.groupBoxScreenfulLimits.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.updownScreenfuls)).BeginInit();
@@ -374,7 +385,6 @@
             this.groupBoxInputType.SuspendLayout();
             this.tabPageAdvancedInputOptions.SuspendLayout();
             this.groupBoxAdvancedInputClock.SuspendLayout();
-            this.groupBoxMultiprogramTS.SuspendLayout();
             this.groupBoxAdvancedInputMisc.SuspendLayout();
             this.groupBoxMythTV.SuspendLayout();
             this.tabPageOutput.SuspendLayout();
@@ -392,6 +402,8 @@
             this.groupBoxTextPosition.SuspendLayout();
             this.groupBoxColors.SuspendLayout();
             this.groupBoxEncoding.SuspendLayout();
+            this.tabPageOutput3.SuspendLayout();
+            this.groupBoxspupng.SuspendLayout();
             this.tabPageCredits.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBoxEndCredits.SuspendLayout();
@@ -818,6 +830,7 @@
             this.tabControlMain.Controls.Add(tabPageDecoders);
             this.tabControlMain.Controls.Add(this.tabPageOutput);
             this.tabControlMain.Controls.Add(this.tabPageOutput2);
+            this.tabControlMain.Controls.Add(this.tabPageOutput3);
             this.tabControlMain.Controls.Add(this.tabPageCredits);
             this.tabControlMain.Controls.Add(this.tabPageDebug);
             this.tabControlMain.Controls.Add(this.tabPageHDHomeRun);
@@ -1124,6 +1137,7 @@
             // 
             // tabPageInputOptions
             // 
+            this.tabPageInputOptions.Controls.Add(this.groupBoxMultiprogramTS);
             this.tabPageInputOptions.Controls.Add(this.groupBoxElementaryStream);
             this.tabPageInputOptions.Controls.Add(this.groupBoxScreenfulLimits);
             this.tabPageInputOptions.Controls.Add(this.groupBoxEndOfProcessing);
@@ -1139,6 +1153,54 @@
             this.tabPageInputOptions.TabIndex = 2;
             this.tabPageInputOptions.Text = "Input options";
             this.tabPageInputOptions.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxMultiprogramTS
+            // 
+            this.groupBoxMultiprogramTS.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBoxMultiprogramTS.Controls.Add(this.rbMultiProgramTSAutoDetect);
+            this.groupBoxMultiprogramTS.Controls.Add(this.rbMultiProgramTSSelect);
+            this.groupBoxMultiprogramTS.Controls.Add(this.tbProgramNumber);
+            this.groupBoxMultiprogramTS.Location = new System.Drawing.Point(-1, 393);
+            this.groupBoxMultiprogramTS.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxMultiprogramTS.Name = "groupBoxMultiprogramTS";
+            this.groupBoxMultiprogramTS.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxMultiprogramTS.Size = new System.Drawing.Size(748, 73);
+            this.groupBoxMultiprogramTS.TabIndex = 10;
+            this.groupBoxMultiprogramTS.TabStop = false;
+            this.groupBoxMultiprogramTS.Text = "Multiprogram Transport Streams";
+            // 
+            // rbMultiProgramTSAutoDetect
+            // 
+            this.rbMultiProgramTSAutoDetect.AutoSize = true;
+            this.rbMultiProgramTSAutoDetect.Checked = true;
+            this.rbMultiProgramTSAutoDetect.Location = new System.Drawing.Point(7, 40);
+            this.rbMultiProgramTSAutoDetect.Margin = new System.Windows.Forms.Padding(2);
+            this.rbMultiProgramTSAutoDetect.Name = "rbMultiProgramTSAutoDetect";
+            this.rbMultiProgramTSAutoDetect.Size = new System.Drawing.Size(428, 17);
+            this.rbMultiProgramTSAutoDetect.TabIndex = 3;
+            this.rbMultiProgramTSAutoDetect.TabStop = true;
+            this.rbMultiProgramTSAutoDetect.Text = "If the TS contains more than one program, select the first one found with suitabl" +
+    "e data";
+            this.rbMultiProgramTSAutoDetect.UseVisualStyleBackColor = true;
+            // 
+            // rbMultiProgramTSSelect
+            // 
+            this.rbMultiProgramTSSelect.AutoSize = true;
+            this.rbMultiProgramTSSelect.Location = new System.Drawing.Point(7, 18);
+            this.rbMultiProgramTSSelect.Margin = new System.Windows.Forms.Padding(2);
+            this.rbMultiProgramTSSelect.Name = "rbMultiProgramTSSelect";
+            this.rbMultiProgramTSSelect.Size = new System.Drawing.Size(335, 17);
+            this.rbMultiProgramTSSelect.TabIndex = 2;
+            this.rbMultiProgramTSSelect.Text = "File is known to contain more than one program. Process this one:";
+            this.rbMultiProgramTSSelect.UseVisualStyleBackColor = true;
+            // 
+            // tbProgramNumber
+            // 
+            this.tbProgramNumber.Location = new System.Drawing.Point(346, 15);
+            this.tbProgramNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.tbProgramNumber.Name = "tbProgramNumber";
+            this.tbProgramNumber.Size = new System.Drawing.Size(76, 20);
+            this.tbProgramNumber.TabIndex = 1;
             // 
             // groupBoxElementaryStream
             // 
@@ -1789,7 +1851,6 @@
             // tabPageAdvancedInputOptions
             // 
             this.tabPageAdvancedInputOptions.Controls.Add(this.groupBoxAdvancedInputClock);
-            this.tabPageAdvancedInputOptions.Controls.Add(this.groupBoxMultiprogramTS);
             this.tabPageAdvancedInputOptions.Controls.Add(this.groupBoxAdvancedInputMisc);
             this.tabPageAdvancedInputOptions.Controls.Add(this.groupBoxMythTV);
             this.tabPageAdvancedInputOptions.Controls.Add(this.label2);
@@ -1809,7 +1870,7 @@
             this.groupBoxAdvancedInputClock.Controls.Add(this.rbClockPTS);
             this.groupBoxAdvancedInputClock.Controls.Add(this.rbClockGOP);
             this.groupBoxAdvancedInputClock.Controls.Add(this.rbClockAuto);
-            this.groupBoxAdvancedInputClock.Location = new System.Drawing.Point(0, 321);
+            this.groupBoxAdvancedInputClock.Location = new System.Drawing.Point(0, 350);
             this.groupBoxAdvancedInputClock.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxAdvancedInputClock.Name = "groupBoxAdvancedInputClock";
             this.groupBoxAdvancedInputClock.Padding = new System.Windows.Forms.Padding(2);
@@ -1865,62 +1926,10 @@
             this.rbClockAuto.UseVisualStyleBackColor = true;
             this.rbClockAuto.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
             // 
-            // groupBoxMultiprogramTS
-            // 
-            this.groupBoxMultiprogramTS.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBoxMultiprogramTS.Controls.Add(this.rbMultiProgramTSAutoDetect);
-            this.groupBoxMultiprogramTS.Controls.Add(this.rbMultiProgramTSSelect);
-            this.groupBoxMultiprogramTS.Controls.Add(this.tbProgramNumber);
-            this.groupBoxMultiprogramTS.Location = new System.Drawing.Point(0, 406);
-            this.groupBoxMultiprogramTS.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBoxMultiprogramTS.Name = "groupBoxMultiprogramTS";
-            this.groupBoxMultiprogramTS.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxMultiprogramTS.Size = new System.Drawing.Size(748, 60);
-            this.groupBoxMultiprogramTS.TabIndex = 4;
-            this.groupBoxMultiprogramTS.TabStop = false;
-            this.groupBoxMultiprogramTS.Text = "Multiprogram Transport Streams";
-            this.groupBoxMultiprogramTS.Enter += new System.EventHandler(this.groupBoxMultiprogramTS_Enter);
-            // 
-            // rbMultiProgramTSAutoDetect
-            // 
-            this.rbMultiProgramTSAutoDetect.AutoSize = true;
-            this.rbMultiProgramTSAutoDetect.Checked = true;
-            this.rbMultiProgramTSAutoDetect.Location = new System.Drawing.Point(7, 40);
-            this.rbMultiProgramTSAutoDetect.Margin = new System.Windows.Forms.Padding(2);
-            this.rbMultiProgramTSAutoDetect.Name = "rbMultiProgramTSAutoDetect";
-            this.rbMultiProgramTSAutoDetect.Size = new System.Drawing.Size(428, 17);
-            this.rbMultiProgramTSAutoDetect.TabIndex = 3;
-            this.rbMultiProgramTSAutoDetect.TabStop = true;
-            this.rbMultiProgramTSAutoDetect.Text = "If the TS contains more than one program, select the first one found with suitabl" +
-    "e data";
-            this.rbMultiProgramTSAutoDetect.UseVisualStyleBackColor = true;
-            this.rbMultiProgramTSAutoDetect.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
-            // 
-            // rbMultiProgramTSSelect
-            // 
-            this.rbMultiProgramTSSelect.AutoSize = true;
-            this.rbMultiProgramTSSelect.Location = new System.Drawing.Point(7, 18);
-            this.rbMultiProgramTSSelect.Margin = new System.Windows.Forms.Padding(2);
-            this.rbMultiProgramTSSelect.Name = "rbMultiProgramTSSelect";
-            this.rbMultiProgramTSSelect.Size = new System.Drawing.Size(335, 17);
-            this.rbMultiProgramTSSelect.TabIndex = 2;
-            this.rbMultiProgramTSSelect.Text = "File is known to contain more than one program. Process this one:";
-            this.rbMultiProgramTSSelect.UseVisualStyleBackColor = true;
-            this.rbMultiProgramTSSelect.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
-            // 
-            // tbProgramNumber
-            // 
-            this.tbProgramNumber.Location = new System.Drawing.Point(346, 15);
-            this.tbProgramNumber.Margin = new System.Windows.Forms.Padding(2);
-            this.tbProgramNumber.Name = "tbProgramNumber";
-            this.tbProgramNumber.Size = new System.Drawing.Size(76, 20);
-            this.tbProgramNumber.TabIndex = 1;
-            this.tbProgramNumber.TextChanged += new System.EventHandler(this.tbProgramNumber_TextChanged);
-            this.tbProgramNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbProgramNumber_KeyPress);
-            // 
             // groupBoxAdvancedInputMisc
             // 
             this.groupBoxAdvancedInputMisc.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBoxAdvancedInputMisc.Controls.Add(this.cb_fixptsjumps);
             this.groupBoxAdvancedInputMisc.Controls.Add(this.cb_ignore_scte20);
             this.groupBoxAdvancedInputMisc.Controls.Add(this.cb_mp4vidtrack);
             this.groupBoxAdvancedInputMisc.Controls.Add(this.cb_use_pic_order_cnt);
@@ -1933,10 +1942,22 @@
             this.groupBoxAdvancedInputMisc.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxAdvancedInputMisc.Name = "groupBoxAdvancedInputMisc";
             this.groupBoxAdvancedInputMisc.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxAdvancedInputMisc.Size = new System.Drawing.Size(748, 191);
+            this.groupBoxAdvancedInputMisc.Size = new System.Drawing.Size(748, 220);
             this.groupBoxAdvancedInputMisc.TabIndex = 3;
             this.groupBoxAdvancedInputMisc.TabStop = false;
             this.groupBoxAdvancedInputMisc.Text = "Miscellaneous options";
+            // 
+            // cb_fixptsjumps
+            // 
+            this.cb_fixptsjumps.AutoSize = true;
+            this.cb_fixptsjumps.Location = new System.Drawing.Point(7, 190);
+            this.cb_fixptsjumps.Name = "cb_fixptsjumps";
+            this.cb_fixptsjumps.Size = new System.Drawing.Size(429, 17);
+            this.cb_fixptsjumps.TabIndex = 8;
+            this.cb_fixptsjumps.Text = "Fix pts jumps. Use this parameter if you experience timeline resets/jumps in the " +
+    "output.";
+            this.cb_fixptsjumps.UseVisualStyleBackColor = true;
+            this.cb_fixptsjumps.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
             // 
             // cb_ignore_scte20
             // 
@@ -2979,6 +3000,56 @@
             this.rbEncodingLatin1.UseVisualStyleBackColor = true;
             this.rbEncodingLatin1.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
             // 
+            // tabPageOutput3
+            // 
+            this.tabPageOutput3.Controls.Add(this.groupBoxspupng);
+            this.tabPageOutput3.Location = new System.Drawing.Point(4, 22);
+            this.tabPageOutput3.Name = "tabPageOutput3";
+            this.tabPageOutput3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageOutput3.Size = new System.Drawing.Size(746, 462);
+            this.tabPageOutput3.TabIndex = 12;
+            this.tabPageOutput3.Text = "Output (3)";
+            this.tabPageOutput3.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxspupng
+            // 
+            this.groupBoxspupng.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.groupBoxspupng.Controls.Add(this.cbspupng_noocr);
+            this.groupBoxspupng.Controls.Add(this.butSelectFontSpupng);
+            this.groupBoxspupng.Controls.Add(this.txtFontSpupng);
+            this.groupBoxspupng.Controls.Add(this.label60);
+            this.groupBoxspupng.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxspupng.Name = "groupBoxspupng";
+            this.groupBoxspupng.Size = new System.Drawing.Size(746, 169);
+            this.groupBoxspupng.TabIndex = 0;
+            this.groupBoxspupng.TabStop = false;
+            this.groupBoxspupng.Text = "spupng";
+            // 
+            // butSelectFontSpupng
+            // 
+            this.butSelectFontSpupng.Location = new System.Drawing.Point(6, 46);
+            this.butSelectFontSpupng.Name = "butSelectFontSpupng";
+            this.butSelectFontSpupng.Size = new System.Drawing.Size(75, 23);
+            this.butSelectFontSpupng.TabIndex = 2;
+            this.butSelectFontSpupng.Text = "Select font";
+            this.butSelectFontSpupng.UseVisualStyleBackColor = true;
+            this.butSelectFontSpupng.Click += new System.EventHandler(this.butSelectFontSpupng_Click);
+            // 
+            // txtFontSpupng
+            // 
+            this.txtFontSpupng.Location = new System.Drawing.Point(108, 48);
+            this.txtFontSpupng.Name = "txtFontSpupng";
+            this.txtFontSpupng.Size = new System.Drawing.Size(498, 20);
+            this.txtFontSpupng.TabIndex = 1;
+            // 
+            // label60
+            // 
+            this.label60.Location = new System.Drawing.Point(8, 16);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(732, 64);
+            this.label60.TabIndex = 0;
+            this.label60.Text = resources.GetString("label60.Text");
+            // 
             // tabPageCredits
             // 
             this.tabPageCredits.Controls.Add(this.panel1);
@@ -3272,6 +3343,8 @@
             // 
             // tabPageDebug
             // 
+            this.tabPageDebug.Controls.Add(this.cbDebugDVB);
+            this.tabPageDebug.Controls.Add(this.cbDebugPESHeader);
             this.tabPageDebug.Controls.Add(this.cbDebugLevDistance);
             this.tabPageDebug.Controls.Add(this.cbDebugAnalyzePackets);
             this.tabPageDebug.Controls.Add(this.cbDebugPMT);
@@ -3297,6 +3370,28 @@
             this.tabPageDebug.TabIndex = 4;
             this.tabPageDebug.Text = "Debug";
             this.tabPageDebug.UseVisualStyleBackColor = true;
+            // 
+            // cbDebugDVB
+            // 
+            this.cbDebugDVB.AutoSize = true;
+            this.cbDebugDVB.Location = new System.Drawing.Point(6, 356);
+            this.cbDebugDVB.Name = "cbDebugDVB";
+            this.cbDebugDVB.Size = new System.Drawing.Size(144, 17);
+            this.cbDebugDVB.TabIndex = 18;
+            this.cbDebugDVB.Text = "Dump debug DVB traces";
+            this.cbDebugDVB.UseVisualStyleBackColor = true;
+            this.cbDebugDVB.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
+            // cbDebugPESHeader
+            // 
+            this.cbDebugPESHeader.AutoSize = true;
+            this.cbDebugPESHeader.Location = new System.Drawing.Point(6, 333);
+            this.cbDebugPESHeader.Name = "cbDebugPESHeader";
+            this.cbDebugPESHeader.Size = new System.Drawing.Size(155, 17);
+            this.cbDebugPESHeader.TabIndex = 17;
+            this.cbDebugPESHeader.Text = "Dump PES packet headers";
+            this.cbDebugPESHeader.UseVisualStyleBackColor = true;
+            this.cbDebugPESHeader.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
             // 
             // cbDebugLevDistance
             // 
@@ -4310,6 +4405,18 @@
             this.folderBrowserDialogHDHomeRun.SelectedPath = "C:\\Program Files\\Silicondust\\HDHomeRun";
             this.folderBrowserDialogHDHomeRun.ShowNewFolderButton = false;
             // 
+            // cbspupng_noocr
+            // 
+            this.cbspupng_noocr.AutoSize = true;
+            this.cbspupng_noocr.Location = new System.Drawing.Point(6, 83);
+            this.cbspupng_noocr.Name = "cbspupng_noocr";
+            this.cbspupng_noocr.Size = new System.Drawing.Size(437, 17);
+            this.cbspupng_noocr.TabIndex = 3;
+            this.cbspupng_noocr.Text = "When processing DVB don\'t use the OCR to write the text as comments in the XML fi" +
+    "le.";
+            this.cbspupng_noocr.UseVisualStyleBackColor = true;
+            this.cbspupng_noocr.CheckedChanged += new System.EventHandler(this.GenericCheckedChangedHandler);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4345,6 +4452,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPageInputOptions.ResumeLayout(false);
+            this.groupBoxMultiprogramTS.ResumeLayout(false);
+            this.groupBoxMultiprogramTS.PerformLayout();
             this.groupBoxElementaryStream.ResumeLayout(false);
             this.groupBoxElementaryStream.PerformLayout();
             this.groupBoxScreenfulLimits.ResumeLayout(false);
@@ -4370,8 +4479,6 @@
             this.tabPageAdvancedInputOptions.ResumeLayout(false);
             this.groupBoxAdvancedInputClock.ResumeLayout(false);
             this.groupBoxAdvancedInputClock.PerformLayout();
-            this.groupBoxMultiprogramTS.ResumeLayout(false);
-            this.groupBoxMultiprogramTS.PerformLayout();
             this.groupBoxAdvancedInputMisc.ResumeLayout(false);
             this.groupBoxAdvancedInputMisc.PerformLayout();
             this.groupBoxMythTV.ResumeLayout(false);
@@ -4403,6 +4510,9 @@
             this.groupBoxColors.PerformLayout();
             this.groupBoxEncoding.ResumeLayout(false);
             this.groupBoxEncoding.PerformLayout();
+            this.tabPageOutput3.ResumeLayout(false);
+            this.groupBoxspupng.ResumeLayout(false);
+            this.groupBoxspupng.PerformLayout();
             this.tabPageCredits.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -4614,8 +4724,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.CheckBox cbWTVConversionFix;
         private System.Windows.Forms.CheckBox cbHauppage;
-        private System.Windows.Forms.GroupBox groupBoxMultiprogramTS;
-        private System.Windows.Forms.TextBox tbProgramNumber;
         private System.Windows.Forms.CheckBox cb_use_pic_order_cnt;
         private System.Windows.Forms.RadioButton rbOutputTypeTimedTXT;
         private System.Windows.Forms.GroupBox groupBoxExportTypeset;
@@ -4683,8 +4791,6 @@
         private System.Windows.Forms.CheckBox cbDebugPMT;
         private System.Windows.Forms.CheckBox cbDebugPAT;
         private System.Windows.Forms.CheckBox cbDebugAnalyzePackets;
-        private System.Windows.Forms.RadioButton rbMultiProgramTSAutoDetect;
-        private System.Windows.Forms.RadioButton rbMultiProgramTSSelect;
         private System.Windows.Forms.GroupBox groupBoxLineTerminator;
         private System.Windows.Forms.RadioButton rbLineTerminatorUNIX;
         private System.Windows.Forms.RadioButton rbLineTerminatorDOS;
@@ -4760,6 +4866,20 @@
         private System.Windows.Forms.RadioButton rbOutputTypeWebVTT;
         private System.Windows.Forms.RadioButton rbInputTypeMXF;
         private System.Windows.Forms.CheckBox cbDisableLevDistance;
+        private System.Windows.Forms.CheckBox cbDebugPESHeader;
+        private System.Windows.Forms.CheckBox cbDebugDVB;
+        private System.Windows.Forms.GroupBox groupBoxMultiprogramTS;
+        private System.Windows.Forms.RadioButton rbMultiProgramTSAutoDetect;
+        private System.Windows.Forms.RadioButton rbMultiProgramTSSelect;
+        private System.Windows.Forms.TextBox tbProgramNumber;
+        private System.Windows.Forms.CheckBox cb_fixptsjumps;
+        private System.Windows.Forms.TabPage tabPageOutput3;
+        private System.Windows.Forms.GroupBox groupBoxspupng;
+        private System.Windows.Forms.Button butSelectFontSpupng;
+        private System.Windows.Forms.TextBox txtFontSpupng;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.OpenFileDialog openFileDialogFontSpupng;
+        private System.Windows.Forms.CheckBox cbspupng_noocr;
     }
 }
 

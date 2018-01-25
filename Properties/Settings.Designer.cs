@@ -754,5 +754,41 @@ namespace CCExtractorGUI.Properties {
                 this["LevDistanceMax"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool FixPTSJumps {
+            get {
+                return ((bool)(this["FixPTSJumps"]));
+            }
+            set {
+                this["FixPTSJumps"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FontPathSpupng {
+            get {
+                return ((string)(this["FontPathSpupng"]));
+            }
+            set {
+                this["FontPathSpupng"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool nospupngocr {
+            get {
+                return ((bool)(this["nospupngocr"]));
+            }
+            set {
+                this["nospupngocr"] = value;
+            }
+        }
     }
 }
